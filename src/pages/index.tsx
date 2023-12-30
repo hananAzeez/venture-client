@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
@@ -66,7 +67,7 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <div className="flex gap-12 justify-between">
+              <div className="flex gap-10 ">
                 {data.map((el, i) => (
                   <div
                     className="flex gap-2 flex-col rounded-xl bg-white bg-opacity-60 text-primary p-3"
