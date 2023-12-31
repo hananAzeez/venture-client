@@ -21,6 +21,8 @@ const config: Config = {
       colors: {
         primary: "#023F76",
         secondary: "#3E4958",
+        light: "#474747",
+        dark: "#333333",
       },
       fontSize: {
         header: "250px",

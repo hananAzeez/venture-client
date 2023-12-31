@@ -25,7 +25,7 @@ const Navbar = () => {
 
         <Link
           href="#"
-          className="px-10 py-3 border border-white rounded-xl font-medium hover:bg-white hover:text-secondary "
+          className="px-10 py-3 border border-white rounded-xl font-medium hover:bg-white hover:text-secondary text-white"
         >
           Login
         </Link>

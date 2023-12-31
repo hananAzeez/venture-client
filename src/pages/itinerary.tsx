@@ -25,9 +25,11 @@ interface ItineraryProps {
 
 const ActivityComponent: React.FC<{ activity: Activity }> = ({ activity }) => (
   <div className="shadow-activity py-8 px-12 rounded-xl">
-    <p className="text-gray-600 mb-2">{activity.time}</p>
-    <p className="text-gray-700 mb-2">{activity.name}</p>
-    <h4 className="text-lg font-semibold mb-2 text-black">
+    <p className="text-light opacity-60 font-semibold text-2xl">
+      {activity.time}
+    </p>
+    <p className="mt-4 text-dark font-bold text-4xl">{activity.name}</p>
+    <h4 className="mt-4 text-light opacity-70 font-medium text-xl">
       {activity.description}
     </h4>
     <a
