@@ -13,6 +13,7 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "header-text": "#000000, #FFFFFF00",
       },
       fontFamily: {
         montserrat: "'Montserrat', sans-serif",
@@ -20,6 +21,12 @@ const config: Config = {
       colors: {
         primary: "#023F76",
         secondary: "#3E4958",
+      },
+      fontSize: {
+        header: "250px",
+      },
+      boxShadow: {
+        activity: "0px 4px 16px 0px rgba(0, 0, 0, 0.13)",
       },
     },
   },
