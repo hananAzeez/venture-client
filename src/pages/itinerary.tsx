@@ -68,11 +68,11 @@ const Itinerary: React.FC<ItineraryProps> = ({ places, description, days }) => (
           <h6 className="font-bold text-4xl mb-16">3 Days in Delhi</h6>
         </div>
       </div>
-      <div className=" container mx-auto">
-        <h1 className="text-3xl font-bold mb-6 text-black">
-          {places} Itinerary
+      <div className=" container mx-auto my-20">
+        <h1 className="text-3xl font-bold mb-6 text-black text-center">
+          Your Itinerary
         </h1>
-        <p className="text-gray-700 mb-6">{description}</p>
+        <p className="text-gray-700 mb-6 text-center">{description}</p>
         {days.map((day, index) => (
           <DayComponent key={index} day={day} />
         ))}

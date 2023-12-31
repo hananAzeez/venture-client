@@ -35,8 +35,7 @@ export const itinerarySchema = {
               properties: {
                 time: {
                   type: "string",
-                  description:
-                    "Time period of the day, representing broader intervals like 'morning,' 'afternoon,' 'evening,' or 'night.'",
+                  description: "time of the day",
                 },
                 description: {
                   type: "string",
