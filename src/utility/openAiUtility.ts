@@ -40,7 +40,7 @@ export const itinerarySchema = {
                 description: {
                   type: "string",
                   description:
-                    "description of that place and the activity in that place in minimum 20 words",
+                    "Detailed description of that place and the activity in that place in atleast 60 words",
                 },
                 name: {
                   type: "string",

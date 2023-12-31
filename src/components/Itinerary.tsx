@@ -24,9 +24,11 @@ interface ItineraryProps {
 
 const ActivityComponent: React.FC<{ activity: Activity }> = ({ activity }) => (
   <div className="border p-4 mb-4 rounded-md">
-    <h4 className="text-lg font-semibold mb-2">{activity.description}</h4>
     <p className="text-gray-600 mb-2">{activity.time}</p>
     <p className="text-gray-700 mb-2">{activity.name}</p>
+    <h4 className="text-lg font-semibold mb-2 text-black">
+      {activity.description}
+    </h4>
     <a
       href={activity.mapUrl}
       target="_blank"
@@ -40,8 +42,8 @@ const ActivityComponent: React.FC<{ activity: Activity }> = ({ activity }) => (
 
 const DayComponent: React.FC<{ day: Day }> = ({ day }) => (
   <div className="mb-8">
-    <h2 className="text-2xl font-bold mb-4">Day {day.day}</h2>
-    <p className="text-gray-700 mb-4">{day.description}</p>
+    <h2 className="text-2xl font-bold mb-4 text-black">Day {day.day}</h2>
+    <p className=" mb-4 ">{day.description}</p>
     <div>
       {day.activities.map((activity, index) => (
         <ActivityComponent key={index} activity={activity} />
@@ -51,8 +53,8 @@ const DayComponent: React.FC<{ day: Day }> = ({ day }) => (
 );
 
 const Itinerary: React.FC<ItineraryProps> = ({ places, description, days }) => (
-  <div className="container mx-auto p-8 bg-white rounded-md shadow-md">
-    <h1 className="text-3xl font-bold mb-6">{places} Itinerary</h1>
+  <div className="container mx-auto p-8  rounded-md shadow-md">
+    <h1 className="text-3xl font-bold mb-6 text-black">{places} Itinerary</h1>
     <p className="text-gray-700 mb-6">{description}</p>
     {days.map((day, index) => (
       <DayComponent key={index} day={day} />

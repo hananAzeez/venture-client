@@ -28,123 +28,169 @@ const dummyData = {
   places: "Delhi",
   numberOfDays: 4,
   description:
-    "Welcome to Delhi, the capital city of India! Get ready for an unforgettable journey through this vibrant and historic metropolis. With a rich blend of ancient traditions and modern attractions, Delhi offers something for everyone. From awe-inspiring monuments to bustling markets and delicious street food, this itinerary will take you on a whirlwind adventure. Explore the iconic landmarks, experience the local culture, and immerse yourself in the vibrant atmosphere of Delhi.",
+    "Welcome to Delhi, the vibrant capital city of India! With a rich history and a blend of modernity and tradition, Delhi offers a fascinating experience for every traveler. Explore ancient monuments, stroll through bustling markets, savor the flavors of Delhi's diverse cuisine, and immerse yourself in the city's vibrant culture. Get ready for an exciting journey as we take you through the highlights of Delhi in 4 days.",
   days: [
     {
       day: 1,
-      description:
-        "Start your day with a visit to the magnificent Red Fort, a UNESCO World Heritage Site. Explore its beautiful architecture and learn about its historical significance. Afterward, head to Jama Masjid, one of the largest mosques in India, and soak in its grandeur. In the afternoon, visit Humayun's Tomb, a stunning mausoleum with beautiful gardens. End the day with a stroll at Lodi Gardens, a serene park filled with ancient tombs.",
+      description: "Arrival in Delhi and Old Delhi Exploration",
       activities: [
         {
-          time: "Morning",
-          description: "Visit the Red Fort",
+          time: "9:00 AM",
+          description:
+            "Start your day with a visit to the iconic Red Fort. Explore the majestic fort and its beautiful gardens.",
           name: "Red Fort",
-          mapUrl: "https://goo.gl/maps/fAKvUed5rSXRD49E9",
+          mapUrl: "https://goo.gl/maps/1HLP13ttsPk",
         },
         {
-          time: "Afternoon",
-          description: "Explore Jama Masjid",
+          time: "11:00 AM",
+          description:
+            "Head to Jama Masjid, one of the largest and most beautiful mosques in India. Admire the stunning architecture and enjoy the serene ambiance.",
           name: "Jama Masjid",
-          mapUrl: "https://goo.gl/maps/kRmcCV8eGMEXE2RdA",
+          mapUrl: "https://goo.gl/maps/SXtXZh1FrsD32",
         },
         {
-          time: "Afternoon",
-          description: "Discover Humayun's Tomb",
-          name: "Humayun's Tomb",
-          mapUrl: "https://goo.gl/maps/3C9L3xL1Rvt8UoPP7",
+          time: "1:00 PM",
+          description:
+            "Indulge in a delicious lunch of traditional Indian cuisine at Karim's, a famous restaurant in Old Delhi.",
+          name: "Karim's",
+          mapUrl: "https://goo.gl/maps/6geRXXSAaYpz2",
         },
         {
-          time: "Evening",
-          description: "Stroll at Lodi Gardens",
-          name: "Lodi Gardens",
-          mapUrl: "https://goo.gl/maps/xrzU1RKwgYjh8Hfb6",
+          time: "3:00 PM",
+          description:
+            "Explore the narrow lanes of Chandni Chowk, one of the oldest and busiest markets in Delhi. Shop for souvenirs, spices, and traditional Indian clothing.",
+          name: "Chandni Chowk",
+          mapUrl: "https://goo.gl/maps/9qCvDzYedp42",
+        },
+        {
+          time: "6:00 PM",
+          description:
+            "End your day with a rickshaw ride through the bustling streets of Old Delhi. Experience the vibrant atmosphere and soak in the sights and sounds of the city.",
+          name: "Rickshaw Ride",
+          mapUrl: "",
         },
       ],
     },
     {
       day: 2,
-      description:
-        "On day 2, immerse yourself in the cultural heritage of Delhi. Start your day with a visit to Qutub Minar, the tallest brick minaret in the world. Next, explore the bustling streets of Chandni Chowk, one of the oldest and busiest markets in Delhi. Indulge in the local street food and shop for traditional goods. In the evening, enjoy a peaceful boat ride at India Gate, a famous war memorial.",
+      description: "New Delhi Exploration",
       activities: [
         {
-          time: "Morning",
-          description: "Visit Qutub Minar",
+          time: "9:30 AM",
+          description:
+            "Visit Humayun's Tomb, a UNESCO World Heritage Site and a stunning example of Mughal architecture. Explore the beautiful gardens and marvel at the intricate details.",
+          name: "Humayun's Tomb",
+          mapUrl: "https://goo.gl/maps/z5Pg2W3HU7x",
+        },
+        {
+          time: "11:30 AM",
+          description:
+            "Head to Qutub Minar, the tallest brick minaret in the world. Admire the intricate carvings and learn about its historical significance.",
           name: "Qutub Minar",
-          mapUrl: "https://goo.gl/maps/Hw4jWHDW6juZ449T8",
+          mapUrl: "https://goo.gl/maps/McJ2T3hT1t7",
         },
         {
-          time: "Afternoon",
-          description: "Explore Chandni Chowk market",
-          name: "Chandni Chowk",
-          mapUrl: "https://goo.gl/maps/RM9b2ptTm781XjCw5",
+          time: "1:00 PM",
+          description:
+            "Enjoy a leisurely lunch at Lodi - The Garden Restaurant, a beautiful outdoor dining spot near Lodhi Gardens.",
+          name: "Lodi - The Garden Restaurant",
+          mapUrl: "https://goo.gl/maps/pjTwoHSbKYp",
         },
         {
-          time: "Evening",
-          description: "Boat ride at India Gate",
-          name: "India Gate",
-          mapUrl: "https://goo.gl/maps/qzTZtK21wYzJRSFr5",
+          time: "3:00 PM",
+          description:
+            "Explore the National Museum, home to a vast collection of Indian art and artifacts. Admire the exhibits and learn about India's rich cultural heritage.",
+          name: "National Museum",
+          mapUrl: "https://g.page/nationalmuseum?",
+        },
+        {
+          time: "6:00 PM",
+          description:
+            "Take a leisurely stroll in Lodhi Gardens, a peaceful oasis in the heart of Delhi. Enjoy the lush greenery and visit the ancient tombs.",
+          name: "Lodhi Gardens",
+          mapUrl: "https://goo.gl/maps/7sazoVxnSzsq",
         },
       ],
     },
     {
       day: 3,
-      description:
-        "Today, discover the architectural wonders of Delhi. Start your day with a visit to the Akshardham Temple, a stunning Hindu temple complex known for its intricate design. Next, head to the Lotus Temple, a beautiful Bahá'í House of Worship. In the afternoon, explore the National Museum, which houses a vast collection of art and artifacts. End the day with a visit to the bustling markets of Connaught Place.",
+      description: "Delhi's Historical Sites",
       activities: [
         {
-          time: "Morning",
-          description: "Visit Akshardham Temple",
+          time: "9:00 AM",
+          description:
+            "Start your day with a visit to the magnificent Akshardham Temple. Explore the intricately carved stone structures and enjoy the captivating light and sound show.",
           name: "Akshardham Temple",
-          mapUrl: "https://goo.gl/maps/r4WhxcixWSTvfZPm6",
+          mapUrl: "https://goo.gl/maps/S8aRUesFXm1wW",
         },
         {
-          time: "Afternoon",
-          description: "Explore Lotus Temple",
+          time: "11:00 AM",
+          description:
+            "Head to the majestic India Gate, a war memorial dedicated to the Indian soldiers who lost their lives in World War I. Enjoy a leisurely walk and soak in the grandeur of the monument.",
+          name: "India Gate",
+          mapUrl: "https://goo.gl/maps/ep6Hq5G9cX62",
+        },
+        {
+          time: "1:00 PM",
+          description:
+            "Savor a delicious lunch at The Pavilion, a rooftop restaurant with stunning views of Delhi.",
+          name: "The Pavilion",
+          mapUrl: "https://goo.gl/maps/RmqkcSDohqA2",
+        },
+        {
+          time: "3:00 PM",
+          description:
+            "Visit the beautiful Lotus Temple, a Bahá'í House of Worship known for its unique lotus-shaped architecture. Enjoy the peaceful atmosphere and explore the surrounding gardens.",
           name: "Lotus Temple",
-          mapUrl: "https://goo.gl/maps/iC6xt4ZdX7W9m4Ld6",
+          mapUrl: "https://goo.gl/maps/2CGH7cRwv6r",
         },
         {
-          time: "Afternoon",
-          description: "Discover National Museum",
-          name: "National Museum",
-          mapUrl: "https://goo.gl/maps/Q4jL55TP9Cw8apWj7",
-        },
-        {
-          time: "Evening",
-          description: "Shop at Connaught Place",
-          name: "Connaught Place",
-          mapUrl: "https://goo.gl/maps/8XbBzGHwwtzRBYyf9",
+          time: "6:00 PM",
+          description:
+            "Experience the vibrant nightlife of Delhi at Hauz Khas Village. Explore the trendy cafes, art galleries, and boutique stores.",
+          name: "Hauz Khas Village",
+          mapUrl: "https://goo.gl/maps/nw5KRbQCG825",
         },
       ],
     },
     {
       day: 4,
-      description:
-        "On your last day, delve into the enchanting history of Delhi. Start your day with a visit to the historic India Gate, a war memorial dedicated to Indian soldiers. Next, explore the majestic Rashtrapati Bhavan, the official residence of the President of India. In the afternoon, visit the Gandhi Smriti, a museum dedicated to Mahatma Gandhi. End your trip with a visit to the bustling markets of Karol Bagh.",
+      description: "Shopping and Farewell to Delhi",
       activities: [
         {
-          time: "Morning",
-          description: "Visit India Gate",
-          name: "India Gate",
-          mapUrl: "https://goo.gl/maps/M7zkt9Y8c31XjMkU7",
+          time: "10:00 AM",
+          description:
+            "Start your day with a visit to Dilli Haat, a vibrant open-air market where you can shop for traditional handicrafts, textiles, and souvenirs.",
+          name: "Dilli Haat",
+          mapUrl: "https://goo.gl/maps/7AvcFjAaQQT2",
         },
         {
-          time: "Morning",
-          description: "Explore Rashtrapati Bhavan",
-          name: "Rashtrapati Bhavan",
-          mapUrl: "https://goo.gl/maps/H5RdJCTVyuHb3qjK7",
+          time: "12:00 PM",
+          description:
+            "Head to Khan Market, one of Delhi's upscale shopping destinations. Explore the boutiques, bookstores, and restaurants.",
+          name: "Khan Market",
+          mapUrl: "https://goo.gl/maps/rHujB5htgvp",
         },
         {
-          time: "Afternoon",
-          description: "Discover Gandhi Smriti",
-          name: "Gandhi Smriti",
-          mapUrl: "https://goo.gl/maps/17GRd8CFqw4pVTc96",
+          time: "2:00 PM",
+          description:
+            "Indulge in a delicious lunch at Indian Accent, a Michelin-starred restaurant known for its innovative Indian cuisine.",
+          name: "Indian Accent",
+          mapUrl: "https://goo.gl/maps/nb99sKaW2BJ2",
         },
         {
-          time: "Evening",
-          description: "Shop at Karol Bagh",
-          name: "Karol Bagh",
-          mapUrl: "https://goo.gl/maps/u7XuVzNrBpgakGYaA",
+          time: "4:00 PM",
+          description:
+            "Visit the bustling and colorful markets of Connaught Place. Shop for clothes, accessories, and electronics.",
+          name: "Connaught Place",
+          mapUrl: "https://goo.gl/maps/5TMrggdNRyh",
+        },
+        {
+          time: "6:00 PM",
+          description:
+            "End your day with a farewell dinner at The Spice Route, a restaurant offering a culinary journey through South East Asia.",
+          name: "The Spice Route",
+          mapUrl: "https://goo.gl/maps/fnzf4Q1jFRq",
         },
       ],
     },
@@ -168,12 +214,13 @@ export default function Home() {
     getItinerary();
   };
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [itinerary, setItinerary] = useState<any>(null);
 
   // Define the itinerary schema
 
   const getItinerary = async () => {
+    setLoading(true);
     try {
       const completion = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
@@ -412,7 +459,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Itinerary {...dummyData} />
+      {loading ? <h1>loading........</h1> : null}
+      {/* {itinerary ? <Itinerary {...itinerary} /> : null} */}
+      {<Itinerary {...dummyData} />}
       {/* <OpenAIComponent userPrompt={promptData} /> */}
     </div>
   );
