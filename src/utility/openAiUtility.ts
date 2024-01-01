@@ -1,7 +1,9 @@
+import axios from "axios";
+
 export const itinerarySchema = {
   type: "object",
   properties: {
-    places: {
+    destination: {
       type: "string",
       description: "Name of the destination for the itinerary.",
     },
@@ -50,17 +52,6 @@ export const itinerarySchema = {
                   type: "string",
                   description: "map url of that place",
                 },
-
-                //   quantity: {
-                //     type: "integer",
-                //     minimum: 1,
-                //     description: "Quantity of the product",
-                //   },
-                //   unitAmount: {
-                //     type: "number",
-                //     minimum: 0,
-                //     description: "Unit amount (price) of the product",
-                //   },
               },
               required: ["time", "description", "name", "mapUrl"],
               additionalProperties: false,
@@ -68,52 +59,58 @@ export const itinerarySchema = {
             description:
               "List of all activities based on correct timeline of the specified date",
           },
-
-          //   quantity: {
-          //     type: "integer",
-          //     minimum: 1,
-          //     description: "Quantity of the product",
-          //   },
-          //   unitAmount: {
-          //     type: "number",
-          //     minimum: 0,
-          //     description: "Unit amount (price) of the product",
-          //   },
         },
         required: ["day", "description", "activities"],
         additionalProperties: false,
       },
       description: "List of days and thier in the itinerary",
     },
-    // preferences: {
-    //   type: "array",
-    //   items: {
-    //     type: "string",
-    //   },
-    //   description:
-    //     "List of travel preferences or interests, e.g., 'cultural landmarks', 'food experiences'.",
-    // },
-    // accommodationType: {
-    //   type: "string",
-    //   description:
-    //     "Preferred type of accommodation, e.g., 'hotel', 'hostel', 'ryokan'.",
-    //   default: "hotel",
-    // },
-    // additionalNotes: {
-    //   type: "string",
-    //   description:
-    //     "Any additional notes or special requests for the itinerary.",
-    //   default: "",
-    // },
   },
   required: [
     "places",
     "numberOfDays",
     "description",
     "days",
-    // "preferences",
-    // "accommodationType",
-    // "additionalNotes",
+  
   ],
   additionalProperties: false,
 };
+
+
+
+export const fetchImageFromKeyword = async (keyword: string) => {
+  const data = await axios.get(`https://api.pexels.com/v1/search?query=${keyword}`, { headers: { Authorization: process.env.NEXT_PUBLIC_PEXEL_KEY } })
+  return data.data.photos[0].src.original
+}
+
+// {
+//   "page": 1,
+//   "per_page": 15,
+//   "photos": [
+//       {
+//           "id": 1542620,
+//           "width": 5240,
+//           "height": 3496,
+//           "url": "https://www.pexels.com/photo/brown-and-black-mosque-under-white-and-blue-cloudy-sky-1542620/",
+//           "photographer": "Yogendra  Singh",
+//           "photographer_url": "https://www.pexels.com/@yogendras31",
+//           "photographer_id": 217645,
+//           "avg_color": "#6A5957",
+//           "src": {
+//               "original": "https://images.pexels.com/photos/1542620/pexels-photo-1542620.jpeg",
+//               "large2x": "https://images.pexels.com/photos/1542620/pexels-photo-1542620.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+//               "large": "https://images.pexels.com/photos/1542620/pexels-photo-1542620.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+//               "medium": "https://images.pexels.com/photos/1542620/pexels-photo-1542620.jpeg?auto=compress&cs=tinysrgb&h=350",
+//               "small": "https://images.pexels.com/photos/1542620/pexels-photo-1542620.jpeg?auto=compress&cs=tinysrgb&h=130",
+//               "portrait": "https://images.pexels.com/photos/1542620/pexels-photo-1542620.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+//               "landscape": "https://images.pexels.com/photos/1542620/pexels-photo-1542620.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+//               "tiny": "https://images.pexels.com/photos/1542620/pexels-photo-1542620.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+//           },
+//           "liked": false,
+//           "alt": "Brown and Black Mosque Under White and Blue Cloudy Sky"
+//       },
+      
+//   ],
+//   "total_results": 786,
+//   "next_page": "https://api.pexels.com/v1/search/?page=2&per_page=15&query=Delhi"
+// }
