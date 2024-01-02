@@ -112,7 +112,7 @@ const Itinerary = () =>
     }, [itinerary]);
 
     if (loading) {
-      return <div className="p-4">Itinary Loading</div>;
+      return <div className="p-4">Itinerary Loading...</div>;
     }
 
     if (!itinaryFullData) {
