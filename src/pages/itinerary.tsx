@@ -112,7 +112,12 @@ const Itinerary = () =>
     }, [itinerary]);
 
     if (loading) {
-      return <div className="p-4">Itinerary Loading...</div>;
+      return (
+        <div className="h-screen w-full flex items-center justify-center">
+          {/* <h2>Itinerary Loading...</h2> */}
+          <div className="lds-hourglass"></div>
+        </div>
+      );
     }
 
     if (!itinaryFullData) {
