@@ -22,7 +22,7 @@ const Itinerary = () =>
     const [loading, setLoading] = useState(false);
     const [itinerary, setItinerary] = useState<ItineraryProps | null>(null);
     const [itinaryFullData, setItinaryFullData] =
-      useState<itinaryWithImage | null>(dummyData);
+      useState<itinaryWithImage | null>(null);
 
     // Define the itinerary schema
 
@@ -103,12 +103,16 @@ const Itinerary = () =>
 
     useEffect(() => {
       if (destination) {
-        // getItinerary(destination as string, days as string)
+        getItinerary(destination as string, days as string);
       }
     }, [destination, days]);
 
+    useEffect(() => {
+      dataConvert();
+    }, [itinerary]);
+
     if (loading) {
-      return <div>Itinary Loading</div>;
+      return <div className="p-4">Itinary Loading</div>;
     }
 
     if (!itinaryFullData) {
@@ -134,21 +138,40 @@ const Itinerary = () =>
               </h1>
             </div>
             <div className="days container mx-auto">
-              <h6 className="font-bold text-4xl mb-16">
+              <h6 className="font-bold text-4xl mb-14 bg-white bg-opacity-10 px-5 py-3 rounded-xl w-fit">
                 {itinaryFullData?.numberOfDays} Days in Delhi
               </h6>
             </div>
           </div>
           <div className=" container mx-auto mt-20 pb-20">
-            <h1 className="text-3xl font-bold mb-6 text-black text-center">
+            <h1 className="text-4xl font-bold mb-16 text-black text-center">
               Your Itinerary
             </h1>
-            <p className="text-gray-700 mb-6 text-center">
+            {/* <p className="text-gray-700 mb-6 text-center">
               {itinaryFullData?.description}
-            </p>
+            </p> */}
             {itinaryFullData?.days.map((day, index) => (
               <DayComponent key={index} day={day} />
             ))}
+            <button className="text-xl font-semibold bg-primary2 py-3 px-10 rounded-full text-white w-fit flex gap-2 items-center mx-auto">
+              Download
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="36"
+                viewBox="0 0 36 36"
+                fill="none"
+              >
+                <path
+                  d="M28.5 22.5C27.6716 22.5 27 23.1716 27 24V27H9V24C9 23.1716 8.32843 22.5 7.5 22.5V22.5C6.67157 22.5 6 23.1716 6 24V27C6 28.65 7.35 30 9 30H27C28.65 30 30 28.65 30 27V24C30 23.1716 29.3284 22.5 28.5 22.5V22.5Z"
+                  fill="white"
+                />
+                <path
+                  d="M24.4415 17.5585C25.0261 16.9739 25.0261 16.0261 24.4415 15.4415V15.4415C23.8577 14.8577 22.9114 14.8568 22.3265 15.4394L19.5 18.255V7.5C19.5 6.67157 18.8284 6 18 6V6C17.1716 6 16.5 6.67157 16.5 7.5V18.255L13.6735 15.4394C13.0886 14.8568 12.1423 14.8577 11.5585 15.4415V15.4415C10.9739 16.0261 10.9739 16.9739 11.5585 17.5585L18 24L24.4415 17.5585Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
           </div>
           {/* <button onClick={() => handleGeneratePdf()}>Download PDF</button> */}
         </div>

@@ -5,7 +5,10 @@ import Navbar from "@/components/layout/Navbar";
 import { useState } from "react";
 import OpenAIComponent from "@/components/openAi/OpenAIComponent";
 import OpenAI from "openai";
-import { fetchImageFromKeyword, itinerarySchema } from "@/utility/openAiUtility";
+import {
+  fetchImageFromKeyword,
+  itinerarySchema,
+} from "@/utility/openAiUtility";
 import { redirect } from "next/navigation";
 import Itinerary from "./itinerary";
 import { useRouter } from "next/router";
@@ -201,40 +204,29 @@ const dummyData = {
 
 // fetchImageFromKeyword("Delhi")
 
-
-
 console.log("hi");
 
-
 export default function Home() {
-  
   const [promptData, setPromptData] = useState({
     destination: "tajMahal",
     days: 1,
   });
-  const router = useRouter()
-
- 
-
-
-  
-
+  const router = useRouter();
 
   const handleSubmit = () => {
     console.log("loading");
     // const { itinerary } = OpenAIComponent(promptData);
     // getItinerary();
 
-    router.push(`/itinerary?destination=${promptData.destination}&days=${promptData.days}`)
-
+    router.push(
+      `/itinerary?destination=${promptData.destination}&days=${promptData.days}`
+    );
 
     // dataConvert().then((el) => {
     //   // console.log(el);
     //   setItinaryFullData(el)
     // })
   };
-
-  
 
   return (
     // delete the below div after the itinerary ui
@@ -328,8 +320,8 @@ export default function Home() {
                 </div>
                 <div className="flex">
                   <div className="flex gap-6 p-4 bg-white bg-opacity-60 rounded-md">
-                    <div className="flex-1 flex items-center bg-white  rounded-xl gap-10">
-                      <div className="flex items-center gap-5 p-3">
+                    <div className="flex-1 flex items-center bg-white  rounded-xl">
+                      <div className="flex items-center gap-5 p-3 ml-3">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="29"
@@ -358,7 +350,19 @@ export default function Home() {
                           <p className="ml-1 text-secondary text-sm font-medium">
                             Location
                           </p>
-                          <select
+                          <input
+                            type="text"
+                            id="destination"
+                            className="bg-transparent text-secondary font-bold placeholder:opacity-50 placeholder:font-medium outline-none"
+                            placeholder="Search"
+                            onChange={(e) =>
+                              setPromptData({
+                                ...promptData,
+                                destination: e.target.value,
+                              })
+                            }
+                          />
+                          {/* <select
                             name="place"
                             id="place"
                             className="bg-transparent text-secondary font-bold"
@@ -372,10 +376,10 @@ export default function Home() {
                             <option value="tajMahal">Taj Mahal</option>
                             <option value="munnar">Munnar</option>
                             <option value="delhi">Delhi</option>
-                          </select>
+                          </select> */}
                         </div>
                       </div>
-                      <div className="w-[1px] h-full bg-secondary"></div>
+                      <div className="ml-10 mr-6 w-[1px] h-full bg-secondary opacity-40"></div>
                       <div className="flex items-center gap-5 p-3">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -417,9 +421,7 @@ export default function Home() {
                                     : promptData.days,
                               })
                             }
-                            className="bg-transparent text-secondary font-bold
-                         outline-none border-none
-                         pl-5"
+                            className="bg-transparent text-secondary font-bold pl-2 outline-none border-none"
                           />
                         </div>
                       </div>
