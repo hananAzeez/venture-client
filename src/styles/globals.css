@@ -13,3 +13,31 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+.activity::before {
+  content: "";
+  width: 48px;
+  height: 48px;
+  background-color: #3a556a;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  left: -100px;
+}
+
+.activity::after {
+  content: "";
+  width: 2px;
+  height: 104%;
+  background: transparent; /* Set background to transparent */
+  border-left: 2px dotted #a3a3a37b; /* Use border for the dotted line */
+  position: absolute;
+  top: 52%;
+  left: -77px;
+  z-index: -1;
+}
+
+.last-activity::after {
+  display: none;
+}

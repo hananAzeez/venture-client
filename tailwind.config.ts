@@ -23,6 +23,7 @@ const config: Config = {
         secondary: "#3E4958",
         light: "#474747",
         dark: "#333333",
+        primary2: "#3A556A",
       },
       fontSize: {
         header: "250px",

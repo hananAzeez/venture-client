@@ -1,198 +1,123 @@
 {
-    "destination": "Delhi",
-    "numberOfDays": 6,
-    "description": "Welcome to Delhi, the capital city of India. Known for its rich history, diverse culture, and architectural wonders, Delhi offers a unique travel experience. Explore ancient monuments, visit bustling markets, taste delicious street food, and immerse yourself in the vibrant atmosphere of this bustling city. Get ready for an exciting journey through the heart of India!",
-    "days": [
+  "destination": "Delhi",
+  "numberOfDays": 4,
+  "description": "Welcome to Delhi, the capital city of India. Known for its rich history, diverse culture, and architectural wonders, Delhi offers a unique travel experience. Explore ancient monuments, visit bustling markets, taste delicious street food, and immerse yourself in the vibrant atmosphere of this bustling city. Get ready for an exciting journey through the heart of India!",
+  "days": [
+    {
+      "day": 1,
+      "description": "Start your Delhi exploration with a visit to the iconic Red Fort. Marvel at its stunning architecture and learn about its historical significance. Next, head to Jama Masjid, one of India's largest mosques. Take a rickshaw ride through the narrow lanes of Chandni Chowk and indulge in some shopping. In the evening, visit India Gate and enjoy a leisurely stroll along Rajpath.",
+      "activities": [
         {
-            "day": 1,
-            "description": "Start your Delhi exploration with a visit to the iconic Red Fort. Marvel at its stunning architecture and learn about its historical significance. Next, head to Jama Masjid, one of India's largest mosques. Take a rickshaw ride through the narrow lanes of Chandni Chowk and indulge in some shopping. In the evening, visit India Gate and enjoy a leisurely stroll along Rajpath.",
-            "activities": [
-                {
-                    "time": "Morning",
-                    "description": "Visit Red Fort",
-                    "name": "Red Fort",
-                    "mapUrl": "https://goo.gl/maps/6o5zPbGknM9sKDrD6",
-                    "activityImg": "https://images.pexels.com/photos/19528181/pexels-photo-19528181.jpeg"
-                },
-                {
-                    "time": "Afternoon",
-                    "description": "Explore Jama Masjid",
-                    "name": "Jama Masjid",
-                    "mapUrl": "https://goo.gl/maps/aA3L9bAaVvf2vUW7A",
-                    "activityImg": "https://images.pexels.com/photos/3624566/pexels-photo-3624566.jpeg"
-                },
-                {
-                    "time": "Evening",
-                    "description": "Visit India Gate",
-                    "name": "India Gate",
-                    "mapUrl": "https://goo.gl/maps/Sp88CSBLv9UmLqMv7",
-                    "activityImg": "https://images.pexels.com/photos/789750/pexels-photo-789750.jpeg"
-                }
-            ]
+          "time": "Morning",
+          "description": "Explore the majestic Red Fort, a UNESCO World Heritage site, on a captivating journey through history. Immerse yourself in the architectural marvels of this iconic fort, witness its intricate details, and relive the stories that echo within its walls.",
+          "name": "Red Fort",
+          "mapUrl": "https://goo.gl/maps/6o5zPbGknM9sKDrD6",
+          "activityImg": "https://images.pexels.com/photos/19528181/pexels-photo-19528181.jpeg"
         },
         {
-            "day": 2,
-            "description": "Today, explore the enchanting old city of Delhi. Start with a visit to the historic Qutub Minar, a UNESCO World Heritage Site. Next, explore the serene Lotus Temple and experience its peaceful ambiance. In the afternoon, visit Humayun's Tomb, another architectural marvel. End your day with a visit to the colorful markets of Dilli Haat.",
-            "activities": [
-                {
-                    "time": "Morning",
-                    "description": "Visit Qutub Minar",
-                    "name": "Qutub Minar",
-                    "mapUrl": "https://goo.gl/maps/qZXcXaK4GHSyLiCr5",
-                    "activityImg": "https://images.pexels.com/photos/2349168/pexels-photo-2349168.jpeg"
-                },
-                {
-                    "time": "Afternoon",
-                    "description": "Explore Lotus Temple",
-                    "name": "Lotus Temple",
-                    "mapUrl": "https://goo.gl/maps/37kJCcayM1vKxgjWA",
-                    "activityImg": "https://images.pexels.com/photos/1098460/pexels-photo-1098460.jpeg"
-                },
-                {
-                    "time": "Evening",
-                    "description": "Visit Humayun's Tomb",
-                    "name": "Humayun's Tomb",
-                    "mapUrl": "https://goo.gl/maps/SusC6xmWxjv9oNpB8",
-                    "activityImg": "https://images.pexels.com/photos/3492589/pexels-photo-3492589.jpeg"
-                },
-                {
-                    "time": "Evening",
-                    "description": "Explore Dilli Haat",
-                    "name": "Dilli Haat",
-                    "mapUrl": "https://goo.gl/maps/KP6dU95E88L9UFXZA",
-                    "activityImg": "https://images.pexels.com/photos/7084367/pexels-photo-7084367.jpeg"
-                }
-            ]
+          "time": "Afternoon",
+          "description": "Embark on a cultural odyssey as you explore the grandeur of Jama Masjid. This iconic mosque, a testament to Mughal architecture, invites you to discover its ornate beauty and spiritual significance.",
+          "name": "Jama Masjid",
+          "mapUrl": "https://goo.gl/maps/aA3L9bAaVvf2vUW7A",
+          "activityImg": "https://images.pexels.com/photos/3624566/pexels-photo-3624566.jpeg"
         },
         {
-            "day": 3,
-            "description": "Spend the day exploring the historical wonders of Delhi. Start with a visit to the majestic Akshardham Temple and admire its stunning architecture. Next, head to the National Museum and delve into India's rich history and culture. In the evening, take a walk through the beautiful Lodhi Gardens and relax amidst the lush greenery.",
-            "activities": [
-                {
-                    "time": "Morning",
-                    "description": "Visit Akshardham Temple",
-                    "name": "Akshardham Temple",
-                    "mapUrl": "https://goo.gl/maps/drRYJAZqJFPGLH1x8",
-                    "activityImg": "https://images.pexels.com/photos/14907353/pexels-photo-14907353.jpeg"
-                },
-                {
-                    "time": "Afternoon",
-                    "description": "Explore National Museum",
-                    "name": "National Museum",
-                    "mapUrl": "https://goo.gl/maps/tf3vCwYV9Fbf8k5d9",
-                    "activityImg": "https://images.pexels.com/photos/6943649/pexels-photo-6943649.jpeg"
-                },
-                {
-                    "time": "Evening",
-                    "description": "Walk in Lodhi Gardens",
-                    "name": "Lodhi Gardens",
-                    "mapUrl": "https://goo.gl/maps/VPtAbEaCf4um3UAP8",
-                    "activityImg": "https://images.pexels.com/photos/14864067/pexels-photo-14864067.jpeg"
-                }
-            ]
-        },
-        {
-            "day": 4,
-            "description": "Embark on a spiritual journey today. Start your day with a visit to the magnificent Akshardham Temple and seek blessings. Next, explore the peaceful and scenic Swaminarayan Akshardham Complex. In the afternoon, visit the beautiful Bangla Sahib Gurudwara and experience its serenity. End your day by attending the captivating sound and light show at Purana Qila.",
-            "activities": [
-                {
-                    "time": "Morning",
-                    "description": "Visit Akshardham Temple",
-                    "name": "Akshardham Temple",
-                    "mapUrl": "https://goo.gl/maps/drRYJAZqJFPGLH1x8",
-                    "activityImg": "https://images.pexels.com/photos/14907353/pexels-photo-14907353.jpeg"
-                },
-                {
-                    "time": "Afternoon",
-                    "description": "Explore Swaminarayan Akshardham Complex",
-                    "name": "Swaminarayan Akshardham Complex",
-                    "mapUrl": "https://goo.gl/maps/RTCQ5ERJ6CWTf2eu7",
-                    "activityImg": "https://images.pexels.com/photos/19568682/pexels-photo-19568682.jpeg"
-                },
-                {
-                    "time": "Evening",
-                    "description": "Visit Bangla Sahib Gurudwara",
-                    "name": "Bangla Sahib Gurudwara",
-                    "mapUrl": "https://goo.gl/maps/mFs82MFAw1FmoBUu6",
-                    "activityImg": "https://images.pexels.com/photos/5125093/pexels-photo-5125093.jpeg"
-                },
-                {
-                    "time": "Evening",
-                    "description": "Attend Sound and Light Show at Purana Qila",
-                    "name": "Purana Qila",
-                    "mapUrl": "https://goo.gl/maps/tbqkKksXUZWQVfraA",
-                    "activityImg": "https://images.pexels.com/photos/12743180/pexels-photo-12743180.jpeg"
-                }
-            ]
-        },
-        {
-            "day": 5,
-            "description": "Today, explore the cultural side of Delhi. Start your day with a visit to the National Gallery of Modern Art and admire contemporary Indian art. Next, visit the Crafts Museum and learn about traditional Indian handicrafts. In the afternoon, explore the vibrant Hauz Khas Village and enjoy its buzzing cafes and boutiques. End your day with a visit to the iconic Kingdom of Dreams.",
-            "activities": [
-                {
-                    "time": "Morning",
-                    "description": "Visit National Gallery of Modern Art",
-                    "name": "National Gallery of Modern Art",
-                    "mapUrl": "https://goo.gl/maps/bTqmPKAKMgtZS9EA9",
-                    "activityImg": "https://images.pexels.com/photos/4067759/pexels-photo-4067759.jpeg"
-                },
-                {
-                    "time": "Afternoon",
-                    "description": "Explore Crafts Museum",
-                    "name": "Crafts Museum",
-                    "mapUrl": "https://goo.gl/maps/ekZNGs4snsHhe1Na7",
-                    "activityImg": "https://images.pexels.com/photos/220987/pexels-photo-220987.jpeg"
-                },
-                {
-                    "time": "Evening",
-                    "description": "Explore Hauz Khas Village",
-                    "name": "Hauz Khas Village",
-                    "mapUrl": "https://goo.gl/maps/yqKwwTdGZEyTakx77",
-                    "activityImg": "https://images.pexels.com/photos/19561453/pexels-photo-19561453.jpeg"
-                },
-                {
-                    "time": "Evening",
-                    "description": "Visit Kingdom of Dreams",
-                    "name": "Kingdom of Dreams",
-                    "mapUrl": "https://goo.gl/maps/YsCjojTtA4KNCgmj9",
-                    "activityImg": "https://images.pexels.com/photos/19583640/pexels-photo-19583640.jpeg"
-                }
-            ]
-        },
-        {
-            "day": 6,
-            "description": "On your last day in Delhi, explore the glorious history of the city. Start with a visit to the magnificent Mughal monument, Safdarjung's Tomb. Next, visit the iconic Raj Ghat, the resting place of Mahatma Gandhi. In the afternoon, explore the National Zoological Park and see a variety of animals. End your day with a visit to the mesmerizing sound and light show at the historical Purana Qila.",
-            "activities": [
-                {
-                    "time": "Morning",
-                    "description": "Visit Safdarjung's Tomb",
-                    "name": "Safdarjung's Tomb",
-                    "mapUrl": "https://goo.gl/maps/cViKBZVY9RREWCze8",
-                    "activityImg": "https://images.pexels.com/photos/2792601/pexels-photo-2792601.jpeg"
-                },
-                {
-                    "time": "Afternoon",
-                    "description": "Explore Raj Ghat",
-                    "name": "Raj Ghat",
-                    "mapUrl": "https://goo.gl/maps/D9vrNwWjKDop8K5D9",
-                    "activityImg": "https://images.pexels.com/photos/11596705/pexels-photo-11596705.jpeg"
-                },
-                {
-                    "time": "Afternoon",
-                    "description": "Visit National Zoological Park",
-                    "name": "National Zoological Park",
-                    "mapUrl": "https://goo.gl/maps/PMjb4G4iYGCf3WiRA",
-                    "activityImg": "https://images.pexels.com/photos/6057174/pexels-photo-6057174.jpeg"
-                },
-                {
-                    "time": "Evening",
-                    "description": "Attend Sound and Light Show at Purana Qila",
-                    "name": "Purana Qila",
-                    "mapUrl": "https://goo.gl/maps/tbqkKksXUZWQVfraA",
-                    "activityImg": "https://images.pexels.com/photos/12743180/pexels-photo-12743180.jpeg"
-                }
-            ]
+          "time": "Evening",
+          "description": "Embark on a journey to India Gate, an emblem of national pride and sacrifice. Marvel at this iconic war memorial's grandeur as it stands tall against the backdrop of the city. ",
+          "name": "India Gate",
+          "mapUrl": "https://goo.gl/maps/Sp88CSBLv9UmLqMv7",
+          "activityImg": "https://images.pexels.com/photos/789750/pexels-photo-789750.jpeg"
         }
-    ],
-    "placeImg": "https://images.pexels.com/photos/1542620/pexels-photo-1542620.jpeg"
+      ]
+    },
+    {
+      "day": 2,
+      "description": "Today, explore the enchanting old city of Delhi. Start with a visit to the historic Qutub Minar, a UNESCO World Heritage Site. Next, explore the serene Lotus Temple and experience its peaceful ambiance. In the afternoon, visit Humayun's Tomb, another architectural marvel. End your day with a visit to the colorful markets of Dilli Haat.",
+      "activities": [
+        {
+          "time": "Morning",
+          "description": "Qutub Minar, a UNESCO World Heritage Site, invites you to delve into rich history and intricate architecture.",
+          "name": "Qutub Minar",
+          "mapUrl": "https://goo.gl/maps/qZXcXaK4GHSyLiCr5",
+          "activityImg": "https://images.pexels.com/photos/2349168/pexels-photo-2349168.jpeg"
+        },
+        {
+          "time": "Afternoon",
+          "description": "Find serenity at the Lotus Temple, experiencing its peaceful ambiance.",
+          "name": "Lotus Temple",
+          "mapUrl": "https://goo.gl/maps/37kJCcayM1vKxgjWA",
+          "activityImg": "https://images.pexels.com/photos/1098460/pexels-photo-1098460.jpeg"
+        },
+        {
+          "time": "Evening",
+          "description": "Visit Humayun's Tomb, another architectural marvel. Explore history amidst lush landscapes. ",
+          "name": "Humayun's Tomb",
+          "mapUrl": "https://goo.gl/maps/SusC6xmWxjv9oNpB8",
+          "activityImg": "https://images.pexels.com/photos/3492589/pexels-photo-3492589.jpeg"
+        },
+        {
+          "time": "Evening",
+          "description": "Explore the vibrant Dilli Haat markets, a feast for the senses. Indulge in diverse crafts, arts, and delicious treats.",
+          "name": "Dilli Haat",
+          "mapUrl": "https://goo.gl/maps/KP6dU95E88L9UFXZA",
+          "activityImg": "https://images.pexels.com/photos/7084367/pexels-photo-7084367.jpeg"
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "description": "Spend the day exploring the historical wonders of Delhi. Start with a visit to the majestic Akshardham Temple and admire its stunning architecture. Next, head to the National Museum and delve into India's rich history and culture. In the evening, take a walk through the beautiful Lodhi Gardens and relax amidst the lush greenery.",
+      "activities": [
+        {
+          "time": "Morning",
+          "description": "Visit the majestic Akshardham Temple, a spiritual haven with stunning architecture.",
+          "name": "Akshardham Temple",
+          "mapUrl": "https://goo.gl/maps/drRYJAZqJFPGLH1x8",
+          "activityImg": "https://images.pexels.com/photos/14907353/pexels-photo-14907353.jpeg"
+        },
+        {
+          "time": "Afternoon",
+          "description": "Delve into India's rich history and culture at the National Museum.",
+          "name": "National Museum",
+          "mapUrl": "https://goo.gl/maps/tf3vCwYV9Fbf8k5d9",
+          "activityImg": "https://images.pexels.com/photos/6943649/pexels-photo-6943649.jpeg"
+        },
+        {
+          "time": "Evening",
+          "description": "Take a leisurely walk through the beautiful Lodhi Gardens. Relax amidst lush greenery and historical remnants.",
+          "name": "Lodhi Gardens",
+          "mapUrl": "https://goo.gl/maps/VPtAbEaCf4um3UAP8",
+          "activityImg": "https://images.pexels.com/photos/14864067/pexels-photo-14864067.jpeg"
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "description": "Embark on a spiritual journey today. Start your day with a visit to the magnificent Akshardham Temple and seek blessings. Next, explore the peaceful and scenic Swaminarayan Akshardham Complex. In the afternoon, visit the beautiful Bangla Sahib Gurudwara and experience its serenity. End your day by attending the captivating sound and light show at Purana Qila.",
+      "activities": [
+        {
+          "time": "Morning",
+          "description": "Cap off your day with the captivating sound and light show at Purana Qila. ",
+          "name": "Purana Qila",
+          "mapUrl": "https://goo.gl/maps/tbqkKksXUZWQVfraA",
+          "activityImg": "https://images.pexels.com/photos/12743180/pexels-photo-12743180.jpeg"
+        },
+        {
+          "time": "Afternoon",
+          "description": "Explore the peaceful and scenic Swaminarayan Akshardham Complex. Immerse in spiritual tranquility",
+          "name": "Swaminarayan Akshardham Complex",
+          "mapUrl": "https://goo.gl/maps/RTCQ5ERJ6CWTf2eu7",
+          "activityImg": "https://images.pexels.com/photos/19568682/pexels-photo-19568682.jpeg"
+        },
+        {
+          "time": "Evening",
+          "description": "Visit the beautiful Bangla Sahib Gurudwara and experience its serene atmosphere.",
+          "name": "Bangla Sahib Gurudwara",
+          "mapUrl": "https://goo.gl/maps/mFs82MFAw1FmoBUu6",
+          "activityImg": "https://images.pexels.com/photos/5125093/pexels-photo-5125093.jpeg"
+        }
+      ]
+    }
+  ],
+  "placeImg": "https://images.pexels.com/photos/1542620/pexels-photo-1542620.jpeg"
 }
