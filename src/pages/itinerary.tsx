@@ -139,7 +139,8 @@ const Itinerary = () =>
             </div>
             <div className="days container mx-auto">
               <h6 className="font-bold text-4xl mb-14 bg-white bg-opacity-10 px-5 py-3 rounded-xl w-fit">
-                {itinaryFullData?.numberOfDays} Days in Delhi
+                {itinaryFullData?.numberOfDays} Days in{" "}
+                {itinaryFullData?.destination}
               </h6>
             </div>
           </div>
