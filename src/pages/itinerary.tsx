@@ -62,8 +62,6 @@ const Itinerary = () =>
           console.log("response", response);
           setItinerary(response);
         }
-
-        setLoading(false);
       } catch (error) {
         console.error("Error calling OpenAI API:", error);
         setLoading(false);
@@ -97,6 +95,7 @@ const Itinerary = () =>
           days: daysWithImages,
         };
 
+        setLoading(false);
         setItinaryFullData(imagedAddedData);
       }
     };
@@ -120,7 +119,7 @@ const Itinerary = () =>
       );
     }
 
-    if (!itinaryFullData) {
+    if (!itinerary) {
       return <div>no itinary</div>;
     }
 
