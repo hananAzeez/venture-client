@@ -13,12 +13,12 @@ const Login = () => {
               <input
                 type="email"
                 placeholder="Email address"
-                className="rounded-xl p-4 border border-light border-opacity-60 w-full "
+                className="rounded-xl p-4 border border-light border-opacity-60 w-full focus:outline-green"
               />
               <input
                 type="password"
                 placeholder="Password"
-                className="mt-4 rounded-xl p-4 border border-light border-opacity-60 w-full "
+                className="mt-4 rounded-xl p-4 border border-light border-opacity-60 w-full focus:outline-green"
               />
               <button className="mt-8 text-white font-semibold rounded-xl text-lg p-5 w-full bg-green">
                 Login
