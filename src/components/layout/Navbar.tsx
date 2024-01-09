@@ -24,7 +24,7 @@ const Navbar = () => {
         </ul>
 
         <Link
-          href="#"
+          href="/login"
           className="px-10 py-3 border border-white rounded-xl font-medium hover:bg-white hover:text-secondary text-white"
         >
           Login
