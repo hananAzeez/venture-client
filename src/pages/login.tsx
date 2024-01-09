@@ -34,13 +34,10 @@ const Login = () => {
             </p>
           </div>
         </div>
-        <div className="w-full h-full">
-          <img
-            src="img/loginImg.jpg"
-            alt="hiking"
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <div
+          className="w-full h-full bg-cover rounded-l-xl bg-center"
+          style={{ backgroundImage: "url(img/loginImg.jpg)" }}
+        ></div>
       </div>
     </main>
   );

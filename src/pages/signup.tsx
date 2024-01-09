@@ -32,19 +32,22 @@ const Signup = () => {
               </button>
             </form>
             <p className="text-center mt-6 text-lg font-medium">
-              Don&apos;t have an account?{" "}
-              <Link href="#" className="text-blue-500 hover:underline">
-                Sign Up
+              Already have an account?{" "}
+              <Link href="/login" className="text-blue-500 hover:underline">
+                Login
               </Link>
             </p>
           </div>
         </div>
-        <div className="w-full h-full">
-          <img
+        <div
+          className="w-full h-full bg-cover rounded-l-xl"
+          style={{ backgroundImage: "url(img/signUpImg.jpg)" }}
+        >
+          {/* <img
             src="img/signupImg.jpg"
             alt="hiking"
             className="w-full h-full object-cover"
-          />
+          /> */}
         </div>
       </div>
     </main>
