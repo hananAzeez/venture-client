@@ -1,6 +1,7 @@
 import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { redirect } from "next/navigation";
 import { useState } from "react";
 
 /* eslint-disable @next/next/no-img-element */
@@ -23,8 +24,8 @@ const Login = () => {
 
       if (response.status === 200) {
         // Handle successful signup
-        console.log(formData);
         localStorage.setItem("token", response.data.token);
+        redirect("/");
 
         console.log("Login successful");
       } else {
