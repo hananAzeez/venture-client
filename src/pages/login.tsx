@@ -25,9 +25,8 @@ const Login = () => {
       if (response.status === 200) {
         // Handle successful signup
         localStorage.setItem("token", response.data.token);
-        redirect("/");
-
         console.log("Login successful");
+        redirect("/");
       } else {
         // Handle signup failure
         console.error("Signup failed");

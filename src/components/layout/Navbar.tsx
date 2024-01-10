@@ -40,7 +40,6 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const pathname = usePathname();
-  console.log(pathname);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
