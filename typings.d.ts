@@ -32,3 +32,11 @@ interface itinaryWithImage extends ItineraryProps {
   placeImg: string;
   days: itinaryWithImageDay[];
 }
+
+interface SignUpFormData {
+  fname: string;
+  lname: string;
+  phone: string;
+  email: string;
+  password: string;
+}
