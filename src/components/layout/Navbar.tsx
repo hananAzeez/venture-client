@@ -1,7 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    setLoggedIn(token !== null && token !== undefined);
+  }, []);
+
   return (
     <div className="container mx-auto">
       <div className="flex items-center justify-between py-6">
@@ -23,12 +31,20 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <Link
-          href="/login"
-          className="px-10 py-3 border border-white rounded-xl font-medium hover:bg-white hover:text-secondary text-white"
-        >
-          Login
-        </Link>
+        {loggedIn ? (
+          <img
+            src="img/profilePreview.png"
+            alt="profile"
+            className="w-8 h-8 rounded-full"
+          />
+        ) : (
+          <Link
+            href="/login"
+            className="px-10 py-3 border border-white rounded-xl font-medium hover:bg-white hover:text-secondary text-white"
+          >
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );
