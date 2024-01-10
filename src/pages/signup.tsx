@@ -27,6 +27,7 @@ const Signup = () => {
       if (response.status === 200) {
         // Handle successful signup
         console.log("Signup successful");
+        router.push("/login");
       } else {
         // Handle signup failure
         console.error("Signup failed");

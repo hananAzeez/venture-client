@@ -26,7 +26,7 @@ const Login = () => {
         // Handle successful signup
         localStorage.setItem("token", response.data.token);
         console.log("Login successful");
-        redirect("/");
+        router.push("/");
       } else {
         // Handle signup failure
         console.error("Signup failed");
