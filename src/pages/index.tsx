@@ -1,6 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import { useState } from "react";
 import OpenAIComponent from "@/components/openAi/OpenAIComponent";
@@ -13,7 +11,6 @@ import { redirect } from "next/navigation";
 import Itinerary from "./itinerary";
 import { useRouter } from "next/router";
 
-const inter = Inter({ subsets: ["latin"] });
 const data = [
   {
     title: "Delhi",
@@ -28,179 +25,6 @@ const data = [
     peopleCount: 20,
   },
 ];
-
-const dummyData = {
-  destination: "Delhi",
-  numberOfDays: 4,
-  description:
-    "Welcome to Delhi, the vibrant capital city of India! With a rich history and a blend of modernity and tradition, Delhi offers a fascinating experience for every traveler. Explore ancient monuments, stroll through bustling markets, savor the flavors of Delhi's diverse cuisine, and immerse yourself in the city's vibrant culture. Get ready for an exciting journey as we take you through the highlights of Delhi in 4 days.",
-  days: [
-    {
-      day: 1,
-      description: "Arrival in Delhi and Old Delhi Exploration",
-      activities: [
-        {
-          time: "9:00 AM",
-          description:
-            "Start your day with a visit to the iconic Red Fort. Explore the majestic fort and its beautiful gardens.",
-          name: "Red Fort",
-          mapUrl: "https://goo.gl/maps/1HLP13ttsPk",
-        },
-        {
-          time: "11:00 AM",
-          description:
-            "Head to Jama Masjid, one of the largest and most beautiful mosques in India. Admire the stunning architecture and enjoy the serene ambiance.",
-          name: "Jama Masjid",
-          mapUrl: "https://goo.gl/maps/SXtXZh1FrsD32",
-        },
-        {
-          time: "1:00 PM",
-          description:
-            "Indulge in a delicious lunch of traditional Indian cuisine at Karim's, a famous restaurant in Old Delhi.",
-          name: "Karim's",
-          mapUrl: "https://goo.gl/maps/6geRXXSAaYpz2",
-        },
-        {
-          time: "3:00 PM",
-          description:
-            "Explore the narrow lanes of Chandni Chowk, one of the oldest and busiest markets in Delhi. Shop for souvenirs, spices, and traditional Indian clothing.",
-          name: "Chandni Chowk",
-          mapUrl: "https://goo.gl/maps/9qCvDzYedp42",
-        },
-        {
-          time: "6:00 PM",
-          description:
-            "End your day with a rickshaw ride through the bustling streets of Old Delhi. Experience the vibrant atmosphere and soak in the sights and sounds of the city.",
-          name: "Rickshaw Ride",
-          mapUrl: "",
-        },
-      ],
-    },
-    {
-      day: 2,
-      description: "New Delhi Exploration",
-      activities: [
-        {
-          time: "9:30 AM",
-          description:
-            "Visit Humayun's Tomb, a UNESCO World Heritage Site and a stunning example of Mughal architecture. Explore the beautiful gardens and marvel at the intricate details.",
-          name: "Humayun's Tomb",
-          mapUrl: "https://goo.gl/maps/z5Pg2W3HU7x",
-        },
-        {
-          time: "11:30 AM",
-          description:
-            "Head to Qutub Minar, the tallest brick minaret in the world. Admire the intricate carvings and learn about its historical significance.",
-          name: "Qutub Minar",
-          mapUrl: "https://goo.gl/maps/McJ2T3hT1t7",
-        },
-        {
-          time: "1:00 PM",
-          description:
-            "Enjoy a leisurely lunch at Lodi - The Garden Restaurant, a beautiful outdoor dining spot near Lodhi Gardens.",
-          name: "Lodi - The Garden Restaurant",
-          mapUrl: "https://goo.gl/maps/pjTwoHSbKYp",
-        },
-        {
-          time: "3:00 PM",
-          description:
-            "Explore the National Museum, home to a vast collection of Indian art and artifacts. Admire the exhibits and learn about India's rich cultural heritage.",
-          name: "National Museum",
-          mapUrl: "https://g.page/nationalmuseum?",
-        },
-        {
-          time: "6:00 PM",
-          description:
-            "Take a leisurely stroll in Lodhi Gardens, a peaceful oasis in the heart of Delhi. Enjoy the lush greenery and visit the ancient tombs.",
-          name: "Lodhi Gardens",
-          mapUrl: "https://goo.gl/maps/7sazoVxnSzsq",
-        },
-      ],
-    },
-    {
-      day: 3,
-      description: "Delhi's Historical Sites",
-      activities: [
-        {
-          time: "9:00 AM",
-          description:
-            "Start your day with a visit to the magnificent Akshardham Temple. Explore the intricately carved stone structures and enjoy the captivating light and sound show.",
-          name: "Akshardham Temple",
-          mapUrl: "https://goo.gl/maps/S8aRUesFXm1wW",
-        },
-        {
-          time: "11:00 AM",
-          description:
-            "Head to the majestic India Gate, a war memorial dedicated to the Indian soldiers who lost their lives in World War I. Enjoy a leisurely walk and soak in the grandeur of the monument.",
-          name: "India Gate",
-          mapUrl: "https://goo.gl/maps/ep6Hq5G9cX62",
-        },
-        {
-          time: "1:00 PM",
-          description:
-            "Savor a delicious lunch at The Pavilion, a rooftop restaurant with stunning views of Delhi.",
-          name: "The Pavilion",
-          mapUrl: "https://goo.gl/maps/RmqkcSDohqA2",
-        },
-        {
-          time: "3:00 PM",
-          description:
-            "Visit the beautiful Lotus Temple, a Bahá'í House of Worship known for its unique lotus-shaped architecture. Enjoy the peaceful atmosphere and explore the surrounding gardens.",
-          name: "Lotus Temple",
-          mapUrl: "https://goo.gl/maps/2CGH7cRwv6r",
-        },
-        {
-          time: "6:00 PM",
-          description:
-            "Experience the vibrant nightlife of Delhi at Hauz Khas Village. Explore the trendy cafes, art galleries, and boutique stores.",
-          name: "Hauz Khas Village",
-          mapUrl: "https://goo.gl/maps/nw5KRbQCG825",
-        },
-      ],
-    },
-    {
-      day: 4,
-      description: "Shopping and Farewell to Delhi",
-      activities: [
-        {
-          time: "10:00 AM",
-          description:
-            "Start your day with a visit to Dilli Haat, a vibrant open-air market where you can shop for traditional handicrafts, textiles, and souvenirs.",
-          name: "Dilli Haat",
-          mapUrl: "https://goo.gl/maps/7AvcFjAaQQT2",
-        },
-        {
-          time: "12:00 PM",
-          description:
-            "Head to Khan Market, one of Delhi's upscale shopping destinations. Explore the boutiques, bookstores, and restaurants.",
-          name: "Khan Market",
-          mapUrl: "https://goo.gl/maps/rHujB5htgvp",
-        },
-        {
-          time: "2:00 PM",
-          description:
-            "Indulge in a delicious lunch at Indian Accent, a Michelin-starred restaurant known for its innovative Indian cuisine.",
-          name: "Indian Accent",
-          mapUrl: "https://goo.gl/maps/nb99sKaW2BJ2",
-        },
-        {
-          time: "4:00 PM",
-          description:
-            "Visit the bustling and colorful markets of Connaught Place. Shop for clothes, accessories, and electronics.",
-          name: "Connaught Place",
-          mapUrl: "https://goo.gl/maps/5TMrggdNRyh",
-        },
-        {
-          time: "6:00 PM",
-          description:
-            "End your day with a farewell dinner at The Spice Route, a restaurant offering a culinary journey through South East Asia.",
-          name: "The Spice Route",
-          mapUrl: "https://goo.gl/maps/fnzf4Q1jFRq",
-        },
-      ],
-    },
-  ],
-};
 
 // fetchImageFromKeyword("Delhi")
 
@@ -229,7 +53,6 @@ export default function Home() {
   };
 
   return (
-    // delete the below div after the itinerary ui
     <div>
       <div className="font-montserrat bg-hero lg:h-screen bg-cover flex flex-col justify-between">
         <Navbar />
@@ -362,21 +185,6 @@ export default function Home() {
                               })
                             }
                           />
-                          {/* <select
-                            name="place"
-                            id="place"
-                            className="bg-transparent text-secondary font-bold"
-                            onChange={(e) =>
-                              setPromptData({
-                                ...promptData,
-                                destination: e.target.value,
-                              })
-                            }
-                          >
-                            <option value="tajMahal">Taj Mahal</option>
-                            <option value="munnar">Munnar</option>
-                            <option value="delhi">Delhi</option>
-                          </select> */}
                         </div>
                       </div>
                       <div className="ml-10 mr-6 w-[1px] h-full bg-secondary opacity-40"></div>

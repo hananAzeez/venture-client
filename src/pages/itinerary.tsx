@@ -170,7 +170,6 @@ const Itinerary = () =>
     if (loading) {
       return (
         <div className="h-screen w-full flex items-center justify-center">
-          {/* <h2>Itinerary Loading...</h2> */}
           <div className="lds-hourglass"></div>
         </div>
       );
@@ -236,7 +235,6 @@ const Itinerary = () =>
               </svg>
             </button>
           </div>
-          {/* <button onClick={() => handleGeneratePdf()}>Download PDF</button> */}
         </div>
       </div>
     );
