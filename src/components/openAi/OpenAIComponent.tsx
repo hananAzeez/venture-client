@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import OpenAI from "openai";
 import { itinerarySchema } from "@/utility/openAiUtility";
 

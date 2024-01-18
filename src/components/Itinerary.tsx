@@ -50,20 +50,20 @@ const ActivityComponent: React.FC<{
             fill="none"
           >
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M12.5711 21.7165L13.3524 20.8362C14.2389 19.8209 15.0362 18.8577 15.7456 17.9415L16.3312 17.1689C18.7765 13.8744 19.9997 11.2595 19.9997 9.32685C19.9997 5.20152 16.6742 1.85742 12.5711 1.85742C8.4681 1.85742 5.14258 5.20152 5.14258 9.32685C5.14258 11.2595 6.36582 13.8744 8.81105 17.1689L9.39667 17.9415C10.4087 19.2383 11.4676 20.4966 12.5711 21.7165Z"
               stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               d="M12.5718 12.3819C14.2813 12.3819 15.667 10.9961 15.667 9.28664C15.667 7.57719 14.2813 6.19141 12.5718 6.19141C10.8623 6.19141 9.47656 7.57719 9.47656 9.28664C9.47656 10.9961 10.8623 12.3819 12.5718 12.3819Z"
               stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
           View in Map
