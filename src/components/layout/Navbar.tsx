@@ -1,7 +1,58 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import { useEffect, useState } from "react";
+// import type { MenuProps } from "antd";
+// import { Button, Dropdown } from "antd";
+import { redirect } from "next/navigation";
+import { usePathname } from "next/navigation";
+
+// const items: MenuProps["items"] = [
+//   {
+//     key: "1",
+//     label: (
+//       <a
+//         target="_blank"
+//         rel="noopener noreferrer"
+//         href="https://www.antgroup.com"
+//       >
+//         Profile
+//       </a>
+//     ),
+//   },
+//   {
+//     key: "2",
+//     label: (
+//       <p
+//         rel="noopener noreferrer"
+//         className="text-[#ff4d4f]"
+//         onClick={() => {
+//           localStorage.removeItem("token");
+//           // if (pathname !== "/") {
+//           // }
+//         }}
+//       >
+//         Logout
+//       </p>
+//     ),
+//   },
+// ];
 
 const Navbar = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    setLoggedIn(token !== null && token !== undefined);
+  }, []);
+
+  const logout = () => {
+    localStorage.removeItem("token");
+    if (pathname !== "/") {
+      redirect("/");
+    }
+  };
+
   return (
     <div className="container mx-auto">
       <div className="flex items-center justify-between py-6">
@@ -23,12 +74,22 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <Link
-          href="/login"
-          className="px-10 py-3 border border-white rounded-xl font-medium hover:bg-white hover:text-secondary text-white"
-        >
-          Login
-        </Link>
+        {loggedIn ? (
+          // <Dropdown menu={{ items }} placement="bottomRight" arrow>
+          <img
+            src="img/profilePreview.png"
+            alt="profile"
+            className="w-8 h-8 rounded-full cursor-pointer"
+          />
+        ) : (
+          // </Dropdown>
+          <Link
+            href="/login"
+            className="px-10 py-3 border border-white rounded-xl font-medium hover:bg-white hover:text-secondary text-white"
+          >
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );

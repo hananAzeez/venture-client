@@ -27,7 +27,7 @@ const Itinerary = () =>
     const [loading, setLoading] = useState(false);
     const [itinerary, setItinerary] = useState<ItineraryProps | null>(null);
     const [itinaryFullData, setItinaryFullData] =
-      useState<itinaryWithImage | null>(null);
+      useState<itinaryWithImage | null>(dummyData);
 
     // Define the itinerary schema
 
@@ -107,13 +107,13 @@ const Itinerary = () =>
 
     useEffect(() => {
       if (destination) {
-        getItinerary(destination as string, days as string);
+        // getItinerary(destination as string, days as string);
       }
     }, [destination, days]);
 
-     useEffect(() => {
-       dataConvert();
-    }, [itinerary]);
+    //  useEffect(() => {
+    //    dataConvert();
+    // }, [itinerary]);
 
     // const printDocument = () => {
     //   const input = document.getElementById("divToPrint");
@@ -170,7 +170,6 @@ const Itinerary = () =>
     if (loading) {
       return (
         <div className="h-screen w-full flex items-center justify-center">
-          {/* <h2>Itinerary Loading...</h2> */}
           <div className="lds-hourglass"></div>
         </div>
       );
@@ -236,7 +235,6 @@ const Itinerary = () =>
               </svg>
             </button>
           </div>
-          {/* <button onClick={() => handleGeneratePdf()}>Download PDF</button> */}
         </div>
       </div>
     );

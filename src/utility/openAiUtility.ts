@@ -66,22 +66,17 @@ export const itinerarySchema = {
       description: "List of days and thier in the itinerary",
     },
   },
-  required: [
-    "places",
-    "numberOfDays",
-    "description",
-    "days",
-  
-  ],
+  required: ["places", "numberOfDays", "description", "days"],
   additionalProperties: false,
 };
 
-
-
 export const fetchImageFromKeyword = async (keyword: string) => {
-  const data = await axios.get(`https://api.pexels.com/v1/search?query=${keyword}`, { headers: { Authorization: process.env.NEXT_PUBLIC_PEXEL_KEY } })
-  return data.data.photos[0].src.original
-}
+  const data = await axios.get(
+    `https://api.pexels.com/v1/search?query=${keyword}`,
+    { headers: { Authorization: process.env.NEXT_PUBLIC_PEXEL_KEY } }
+  );
+  return data.data?.photos[0]?.src?.original;
+};
 
 // {
 //   "page": 1,
@@ -109,7 +104,7 @@ export const fetchImageFromKeyword = async (keyword: string) => {
 //           "liked": false,
 //           "alt": "Brown and Black Mosque Under White and Blue Cloudy Sky"
 //       },
-      
+
 //   ],
 //   "total_results": 786,
 //   "next_page": "https://api.pexels.com/v1/search/?page=2&per_page=15&query=Delhi"
