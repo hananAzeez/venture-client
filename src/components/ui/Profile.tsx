@@ -21,18 +21,18 @@ const Profile = () => {
         </svg>
         <p>Profile</p>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex justify-center">
         <div className="h-[190px] w-[1180px] bg-[#3A556A] rounded-lg mt-3">
-          <div className=" border-[#F8F8FF] justify-between">
-            <div className=" flex gap-5  flex-row items-center">
+          <div className=" flex gap-5  flex-row items-center justify-between px-11">
+            <div className="flex gap-7">
               <Image
-                src="/img/user-image.png"
-                className="my-11"
+                src="/img/annan.png"
+                className="my-11 rounded-full"
                 alt="logo"
                 width={100}
                 height={100}
               />
-              <p className="text-[18px] text-white">
+              <p className="text-[18px] text-white my-auto">
                 Hello <br /> <span className="text-[24px]"> Shaan </span>
               </p>
             </div>
@@ -41,6 +41,22 @@ const Profile = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="grid-rows-2">
+        <ul>
+          <li className="flex justify-center">
+            <div className="w-[550px] flex justify-between items-center mt-12 mb-24 py-5">
+              <p className="text-[18px] text-[#3A556A]">First Name</p>
+              <p className="text-[18px] text-[#3A556A]">Last Name</p>
+            </div>
+          </li>
+          <li className="flex justify-center">
+            <div className="w-[550px] flex justify-between items-center mt-12 mb-24 py-5">
+              <p className="text-[18px] text-[#3A556A]">Email</p>
+              <p className="text-[18px] text-[#3A556A]">Phone Number</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
   );
