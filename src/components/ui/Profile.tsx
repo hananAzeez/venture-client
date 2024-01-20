@@ -4,7 +4,7 @@ import React from "react";
 const Profile = () => {
   return (
     <section>
-      <div className="flex items-center gap-4 font-[500] text-[32px] ml-20 my-10">
+      <div className="flex items-center gap-4 font-[500] text-[32px] ml-24 my-10">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"
@@ -21,8 +21,8 @@ const Profile = () => {
         </svg>
         <p>Profile</p>
       </div>
-      <div className="flex justify-center">
-        <div className="h-[190px] w-[1180px] bg-[#3A556A] rounded-lg mt-3">
+      <div className="flex justify-center mx-24">
+        <div className="h-full w-full bg-[#3A556A] rounded-lg mt-3">
           <div className=" flex gap-5  flex-row items-center justify-between px-11">
             <div className="flex gap-7">
               <Image
