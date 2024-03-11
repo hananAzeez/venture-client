@@ -1,38 +1,38 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import type { MenuProps } from "antd";
-import { Button, Dropdown } from "antd";
+// import type { MenuProps } from "antd";
+// import { Button, Dropdown } from "antd";
 import { redirect } from "next/navigation";
 import { usePathname } from "next/navigation";
 // import { Dropdown } from "antd";
 
-const items: MenuProps["items"] = [
-  {
-    key: "1",
-    label: (
-      <Link rel="noopener noreferrer" href="/profile">
-        Profile
-      </Link>
-    ),
-  },
-  {
-    key: "2",
-    label: (
-      <p
-        rel="noopener noreferrer"
-        className="text-[#ff4d4f]"
-        onClick={() => {
-          localStorage.removeItem("token");
-          // if (pathname !== "/") {
-          // }
-        }}
-      >
-        Logout
-      </p>
-    ),
-  },
-];
+// const items: MenuProps["items"] = [
+//   {
+//     key: "1",
+//     label: (
+//       <Link rel="noopener noreferrer" href="/profile">
+//         Profile
+//       </Link>
+//     ),
+//   },
+//   {
+//     key: "2",
+//     label: (
+//       <p
+//         rel="noopener noreferrer"
+//         className="text-[#ff4d4f]"
+//         onClick={() => {
+//           localStorage.removeItem("token");
+//           // if (pathname !== "/") {
+//           // }
+//         }}
+//       >
+//         Logout
+//       </p>
+//     ),
+//   },
+// ];
 
 const Navbar = () => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -72,14 +72,14 @@ const Navbar = () => {
         </ul>
 
         {loggedIn ? (
-          <Dropdown menu={{ items }} placement="bottomRight" arrow>
-            <img
-              src="img/profilePreview.png"
-              alt="profile"
-              className="w-8 h-8 rounded-full cursor-pointer"
-            />
-          </Dropdown>
+          // <Dropdown menu={{ items }} placement="bottomRight" arrow>
+          <img
+            src="img/profilePreview.png"
+            alt="profile"
+            className="w-8 h-8 rounded-full cursor-pointer"
+          />
         ) : (
+          // {/* </Dropdown> */}
           <Link
             href="/login"
             className="px-10 py-3 border border-white rounded-xl font-medium hover:bg-white hover:text-secondary text-white"

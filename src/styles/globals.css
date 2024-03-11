@@ -73,3 +73,7 @@ body {
     transform: rotate(1800deg);
   }
 }
+
+.profile-item:hover svg path {
+  fill: #fff;
+}

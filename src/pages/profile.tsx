@@ -47,7 +47,7 @@ const profile = () => {
         <div className="mt-12">
           <ul className="text-[22px] w-56 text-dark font-[500] ">
             <li
-              className="flex items-center justify-between  mb-6 cursor-pointer"
+              className=" profile-item flex items-center justify-between py-4 cursor-po hover:bg-primary2 hover:text-white rounded-xl px-6 transition-all duration-200 cursor-pointer"
               onClick={() => {
                 setIndex(1);
               }}
@@ -86,7 +86,7 @@ const profile = () => {
               </svg>
             </li>
             <li
-              className="flex items-center justify-between  mb-11 cursor-pointer"
+              className=" profile-item flex items-center justify-between cursor-pointer py-4 hover:bg-primary2 hover:text-white rounded-xl px-6 transition-all duration-200 cursor-pointer"
               onClick={() => {
                 setIndex(2);
               }}
