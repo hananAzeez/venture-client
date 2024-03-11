@@ -18,7 +18,7 @@ const data = [
 const YourTrip = () => {
   return (
     <section>
-      <div className="flex items-center gap-[10px] font-[500] text-[32px] ml-20 my-10 ">
+      <div className="flex items-center gap-[10px] font-[500] text-[32px] ml-16 my-10 ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="36"
@@ -35,9 +35,9 @@ const YourTrip = () => {
             fill="black"
           />
         </svg>
-        <p>Your Trip</p>
+        <p className="text-dark">Your Trip</p>
       </div>
-      <div className="mt-14 ml-48">
+      <div className="mt-10 ml-16">
         <div className="flex gap-10 ">
           {data.map((el, i) => (
             <div

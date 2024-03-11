@@ -45,3 +45,10 @@ interface LoginFormData {
   email: string;
   password: string;
 }
+
+interface Person {
+  fname: string;
+  lname: string;
+  phone: string;
+  email: string;
+}

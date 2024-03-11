@@ -27,7 +27,7 @@ const Itinerary = () =>
     const [loading, setLoading] = useState(false);
     const [itinerary, setItinerary] = useState<ItineraryProps | null>(null);
     const [itinaryFullData, setItinaryFullData] =
-      useState<itinaryWithImage | null>(dummyData);
+      useState<itinaryWithImage | null>();
 
     // Define the itinerary schema
 
@@ -107,13 +107,13 @@ const Itinerary = () =>
 
     useEffect(() => {
       if (destination) {
-        // getItinerary(destination as string, days as string);
+        getItinerary(destination as string, days as string);
       }
     }, [destination, days]);
 
-    //  useEffect(() => {
-    //    dataConvert();
-    // }, [itinerary]);
+    useEffect(() => {
+      dataConvert();
+    }, [itinerary]);
 
     // const printDocument = () => {
     //   const input = document.getElementById("divToPrint");

@@ -1,28 +1,53 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Profile from "@/components/ui/Profile";
 import YourTrip from "@/components/ui/YourTrip";
+import { apiInstance } from "@/utility/axiosUtility";
 import Image from "next/image";
-import { useState } from "react";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 const profile = () => {
   const [index, setIndex] = useState(1);
 
+  const [userData, setUserData] = useState<Person | null>(null);
+
+  const fetchProfileData = async () => {
+    try {
+      const response = await apiInstance.get("/user/profile");
+      // Handle the response
+      setUserData(response.data);
+    } catch (error) {
+      // Handle errors
+      console.error(error);
+    }
+  };
+  const router = useRouter();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      fetchProfileData();
+    } else {
+      router.push("/");
+    }
+  }, []);
+
   return (
     <div className="flex h-screen w-screen">
-      <div className="max-w-[375px] w-full bg-[#f7f7f7] flex-col flex shadow-xl z-10">
-        <div className="mx-20">
+      <div className="max-w-[375px] w-full bg-[#f7f7f7] flex-col flex shadow-xl z-10 pl-20 py-12">
+        <div className="">
           <Image
             src="/img/logo-black.png"
-            className="my-12"
+            className=""
             alt="logo"
             width={165}
             height={50}
           />
         </div>
-        <div className="ml-auto mr-4">
-          <ul className="text-[22px] w-56 text-black font-[500] ">
+        <div className="mt-12">
+          <ul className="text-[22px] w-56 text-dark font-[500] ">
             <li
-              className="flex items-center justify-between  mb-11 cursor-pointer"
+              className="flex items-center justify-between  mb-6 cursor-pointer"
               onClick={() => {
                 setIndex(1);
               }}
@@ -105,8 +130,26 @@ const profile = () => {
         </div>
       </div>
       <div className="bg-[#f7f7f7] w-screen z-0">
-        <div className="flex justify-end">
-          <div className="flex gap-[22px] mr-[80px] mt-[50px]">
+        <div className="flex items-center justify-between px-16 py-10">
+          <div className="flex items-center gap-4 font-[500] text-[32px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              className=""
+              viewBox="0 0 32 32"
+              fill="#333"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.88889 7.11111C8.88889 5.22513 9.63809 3.41639 10.9717 2.0828C12.3053 0.749204 14.114 0 16 0C17.886 0 19.6947 0.749204 21.0283 2.0828C22.3619 3.41639 23.1111 5.22513 23.1111 7.11111C23.1111 8.9971 22.3619 10.8058 21.0283 12.1394C19.6947 13.473 17.886 14.2222 16 14.2222C14.114 14.2222 12.3053 13.473 10.9717 12.1394C9.63809 10.8058 8.88889 8.9971 8.88889 7.11111ZM8.88889 17.7778C6.53141 17.7778 4.27049 18.7143 2.6035 20.3813C0.936505 22.0483 0 24.3092 0 26.6667C0 28.0812 0.561903 29.4377 1.5621 30.4379C2.56229 31.4381 3.91885 32 5.33333 32H26.6667C28.0812 32 29.4377 31.4381 30.4379 30.4379C31.4381 29.4377 32 28.0812 32 26.6667C32 24.3092 31.0635 22.0483 29.3965 20.3813C27.7295 18.7143 25.4686 17.7778 23.1111 17.7778H8.88889Z"
+                fill="black"
+              />
+            </svg>
+            <p className="text-dark">Profile</p>
+          </div>
+          <div className="flex gap-[22px] ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="34"
@@ -122,33 +165,6 @@ const profile = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="33"
-              viewBox="0 0 32 33"
-              fill="none"
-              className="cursor-pointer"
-            >
-              <g clipPath="url(#clip0_220_1179)">
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M19.9998 25.8493C20 26.5221 19.7459 27.17 19.2885 27.6633C18.831 28.1567 18.204 28.4588 17.5331 28.5093L17.3331 28.516H14.6665C13.9937 28.5162 13.3457 28.2621 12.8524 27.8046C12.3591 27.3472 12.0569 26.7202 12.0065 26.0493L11.9998 25.8493H19.9998ZM15.9998 3.18262C18.4198 3.18258 20.7452 4.12248 22.4854 5.80405C24.2257 7.48562 25.2448 9.7774 25.3278 12.196L25.3331 12.516V17.5346L27.7625 22.3933C27.8685 22.6053 27.9215 22.8398 27.9171 23.0768C27.9127 23.3138 27.8508 23.5462 27.7369 23.7541C27.623 23.9619 27.4605 24.1391 27.2631 24.2704C27.0658 24.4017 26.8395 24.4832 26.6038 24.5079L26.4505 24.516H5.54913C5.31202 24.516 5.07842 24.4586 4.86836 24.3486C4.6583 24.2386 4.47804 24.0793 4.34302 23.8844C4.208 23.6895 4.12226 23.4648 4.09314 23.2294C4.06401 22.9941 4.09238 22.7552 4.1758 22.5333L4.23713 22.3933L6.66646 17.5346V12.516C6.66646 10.0406 7.6498 7.66663 9.40014 5.91629C11.1505 4.16595 13.5244 3.18262 15.9998 3.18262ZM15.9998 5.84928C14.2818 5.84938 12.6302 6.51267 11.3894 7.70083C10.1486 8.88899 9.41436 10.5103 9.3398 12.2266L9.33313 12.516V17.5346C9.33315 17.8653 9.27166 18.1931 9.1518 18.5013L9.0518 18.728L7.4918 21.8493H24.5091L22.9491 18.7266C22.8011 18.431 22.7094 18.1104 22.6785 17.7813L22.6665 17.5346V12.516C22.6665 10.7478 21.9641 9.05215 20.7138 7.80191C19.4636 6.55166 17.7679 5.84928 15.9998 5.84928Z"
-                  fill="black"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_220_1179">
-                  <rect
-                    width="32"
-                    height="32"
-                    fill="white"
-                    transform="translate(0 0.515625)"
-                  />
-                </clipPath>
-              </defs>
             </svg>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -190,7 +206,7 @@ const profile = () => {
             </div>
           </div>
         </div>
-        {index == 1 ? <Profile /> : <YourTrip />}
+        {index == 1 ? <Profile data={userData} /> : <YourTrip />}
       </div>
     </div>
   );

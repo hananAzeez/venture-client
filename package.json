@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
+    "@types/antd": "^1.0.0",
+    "antd": "^5.15.2",
     "axios": "^1.6.3",
     "html-to-image": "^1.11.11",
     "html2canvas": "^1.4.1",
