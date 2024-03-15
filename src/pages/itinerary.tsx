@@ -15,7 +15,7 @@ import jsPDF from "jspdf";
 import * as htmlToImage from "html-to-image";
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
   dangerouslyAllowBrowser: true,
 });
 
