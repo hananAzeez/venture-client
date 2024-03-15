@@ -216,7 +216,7 @@ const Itinerary = () =>
               <DayComponent key={index} day={day} />
             ))}
             <button className="text-xl font-semibold bg-primary2 py-3 px-10 rounded-full text-white w-fit flex gap-2 items-center mx-auto">
-              Download
+              Save
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="36"
