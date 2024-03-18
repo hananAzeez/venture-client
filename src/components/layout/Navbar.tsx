@@ -52,11 +52,11 @@ const Navbar = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="flex items-center justify-between py-6">
+      <div className=" flex items-center justify-between py-6">
         <Link href="/">
           <img src="/img/logo-white.png" alt="logo"></img>
         </Link>
-        <ul className="flex items-center justify-center gap-16">
+        <ul className="hidden lg:flex items-center justify-center gap-16">
           <li className="font-medium text-sm text-white hover:opacity-85 cursor-pointer">
             Activities
           </li>
