@@ -9,10 +9,6 @@ import OpenAI from "openai";
 import React, { useEffect, useRef, useState } from "react";
 import dummyData from "../data/itinary.json";
 import { DayComponent } from "@/components/Itinerary";
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
-
-import * as htmlToImage from "html-to-image";
 
 const openai = new OpenAI({
   apiKey: process.env.NEXT_PUBLIC_API_KEY,
@@ -30,8 +26,6 @@ const Itinerary = () =>
       useState<itinaryWithImage | null>();
 
     // Define the itinerary schema
-
-    // console.log(itinaryFullData);
 
     const getItinerary = async (destination: string, days: string) => {
       setLoading(true);
@@ -115,58 +109,6 @@ const Itinerary = () =>
       dataConvert();
     }, [itinerary]);
 
-    // const printDocument = () => {
-    //   const input = document.getElementById("divToPrint");
-    //   if (input)
-    // html2canvas(input).then((canvas) => {
-    //   const imgData = canvas.toDataURL("image/png");
-    //   console.log(canvas);
-
-    //   const pdf = new jsPDF();
-    //   pdf.addImage(imgData, "JPEG", 0, 0);
-    //   // pdf.output('dataurlnewwindow');
-    //   pdf.save("download.pdf");
-    // });
-
-    // var node = document.getElementById("my-node");
-    // htmlToImage
-    //   .toPng(input)
-    //   .then(function (dataUrl) {
-    // var img = new Image();
-    // img.src = dataUrl;
-    // console.log(dataUrl);
-
-    // Create an <a> tag
-    // var downloadLink = document.createElement("a");
-
-    // Set the href attribute to the data URL
-    // downloadLink.href = dataUrl;
-
-    // Set the download attribute with a desired filename
-    // downloadLink.download = "generated_image.png";
-
-    // Optional: You can set other attributes or styles if needed
-    // downloadLink.setAttribute('target', '_blank');
-    // downloadLink.style.display = 'none';
-
-    // Simulate a click on the link to open it in a new tab
-    // document.body.appendChild(downloadLink);
-    // downloadLink.click();
-    // document.body.removeChild(downloadLink);
-
-    // const pdf = new jsPDF();
-    // pdf.addImage(dataUrl, "JPEG", 0, 0, 1920);
-    // pdf.output('dataurlnewwindow');
-    //         pdf.save("download.pdf");
-    //         console.log(dataUrl);
-
-    //         // document.body.appendChild(img);
-    //       })
-    //       .catch(function (error) {
-    //         console.error("oops, something went wrong!", error);
-    //       });
-    // };
-
     if (loading) {
       return (
         <div className="h-screen w-full flex items-center justify-center">
@@ -209,9 +151,6 @@ const Itinerary = () =>
             <h1 className="text-4xl font-bold mb-16 text-black text-center">
               Your Itinerary
             </h1>
-            {/* <p className="text-gray-700 mb-6 text-center">
-              {itinaryFullData?.description}
-            </p> */}
             {itinaryFullData?.days.map((day, index) => (
               <DayComponent key={index} day={day} />
             ))}

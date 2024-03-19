@@ -1,13 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Navbar from "@/components/layout/Navbar";
 import { useState } from "react";
-import OpenAIComponent from "@/components/openAi/OpenAIComponent";
-import OpenAI from "openai";
-import {
-  fetchImageFromKeyword,
-  itinerarySchema,
-} from "@/utility/openAiUtility";
-import { redirect } from "next/navigation";
 import Itinerary from "./itinerary";
 import { useRouter } from "next/router";
 
