@@ -8,14 +8,17 @@ const data = [
   {
     title: "Delhi",
     peopleCount: 31,
+    link: "http://localhost:3000/itinerary?destination=Delhi&days=2",
   },
   {
     title: "Munnar",
     peopleCount: 27,
+    link: "http://localhost:3000/itinerary?destination=Munnar&days=1",
   },
   {
     title: "Agra",
     peopleCount: 20,
+    link: "http://localhost:3000/itinerary?destination=Agra&days=1",
   },
 ];
 
@@ -60,7 +63,7 @@ export default function Home() {
                   <h2 className="font-medium text-2xl uppercase text-white">
                     Most Popular
                   </h2>
-                  <svg
+                  {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="32"
                     height="32"
@@ -91,7 +94,7 @@ export default function Home() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     />
-                  </svg>
+                  </svg> */}
                 </div>
                 <div className="flex gap-5 lg:gap-10 ">
                   {data.map((el, i) => (
