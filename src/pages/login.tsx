@@ -25,7 +25,6 @@ const Login = () => {
 
       console.log(response);
 
-
       if (response.status === 200) {
         // Handle successful signup
         localStorage.setItem("token", response.data.token);
@@ -37,7 +36,9 @@ const Login = () => {
       }
     } catch (error) {
       console.log((error as any).response.data.message);
-      toast.error("Error during signup:" + (error as any).response.data.message);
+      toast.error(
+        "Error during signup:" + (error as any).response.data.message
+      );
     }
   };
 
@@ -89,7 +90,7 @@ const Login = () => {
                 onChange={handleChange}
                 className="mt-4 rounded-xl p-4 border border-light border-opacity-60 w-full focus:outline-green"
               />
-              <button className="mt-8 text-white font-semibold rounded-xl text-lg p-5 w-full bg-green">
+              <button className="mt-8 text-white font-semibold rounded-xl text-lg p-5 w-full bg-green hover:bg-lime-950">
                 Login
               </button>
             </form>

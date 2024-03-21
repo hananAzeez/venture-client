@@ -98,9 +98,10 @@ export default function Home() {
                 </div>
                 <div className="flex gap-5 lg:gap-10 ">
                   {data.map((el, i) => (
-                    <div
+                    <a
                       className="flex gap-2 flex-col rounded-xl bg-white bg-opacity-60 text-primary p-3"
                       key={i}
+                      href={el.link}
                     >
                       <img src={`/img/place/${i + 1}.png`} alt={`img ${el}`} />
                       <div>
@@ -134,7 +135,7 @@ export default function Home() {
                           {el.peopleCount} people going
                         </p>
                       </div>
-                    </div>
+                    </a>
                   ))}
                 </div>
                 {/* MOBILE SEARCH */}

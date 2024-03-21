@@ -111,7 +111,7 @@ const Signup = () => {
                 onChange={handleChange}
                 className="mt-4 rounded-xl p-4 border border-light border-opacity-60 w-full focus:outline-green"
               />
-              <button className="mt-8 text-white font-semibold rounded-xl text-lg p-5 w-full bg-green">
+              <button className="mt-8 text-white font-semibold rounded-xl text-lg p-5 w-full bg-green hover:bg-lime-950">
                 Signup
               </button>
             </form>
