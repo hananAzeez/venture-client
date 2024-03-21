@@ -7,14 +7,14 @@ const Loadingdata = [
     quote:
       "Venture into the unknown; let curiosity be your compass. Travel is the gateway to infinite possibilities and unforgettable experiences.",
     author: "Mark Twain",
-    image: "img/loading/ld-5.jpg",
+    image: "img/loading/ld-3.jpg",
   },
   {
     id: 2,
     quote:
       "In travel, we discover the essence of life. Each journey is a chapter, written with moments of wonder, growth, and connection.",
     author: "Ibn Battuta",
-    image: "img/loading/ld-3.jpg",
+    image: "img/loading/ld-5.jpg",
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const Loading = () => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const interval = 12 / 3; // Total duration divided by number of steps
+    const interval = 10 / 3; // Total duration divided by number of steps
     let currentStep = 0;
 
     const timer = setInterval(() => {
@@ -72,7 +72,7 @@ const Loading = () => {
               alt="logo"
               className="max-w-52"
             ></img>
-            <h3 className="font-semibold text-2xl mt-10">
+            <h3 className="font-semibold text-2xl mt-20 leading-normal">
               {Loadingdata[index].quote}
             </h3>
             <h5 className="font-medium text-xl -mt-3">
@@ -88,8 +88,9 @@ const Loading = () => {
               className="w-full h-full object-cover object-center rounded-2xl"
             />
             <div className="absolute bottom-4 left-[2%]  w-[96%] bg-gray-300 bg-opacity-60 backdrop:blur-md h-3 rounded-full">
+              {/* bg-gradient-to-r from-emerald-500 to-emerald-900 */}
               <div
-                className="bg-gradient-to-r from-emerald-500 to-emerald-900 h-full rounded-full transition-all duration-300"
+                className="bg-gradient-to-r from-emerald-400 to-cyan-400 h-full rounded-full transition-all duration-300"
                 style={{ width: `${progress}%` }}
               ></div>
             </div>
