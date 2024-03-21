@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { redirect } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 /* eslint-disable @next/next/no-img-element */
 const Login = () => {
@@ -22,6 +23,9 @@ const Login = () => {
         formData
       );
 
+      console.log(response);
+
+
       if (response.status === 200) {
         // Handle successful signup
         localStorage.setItem("token", response.data.token);
@@ -32,7 +36,8 @@ const Login = () => {
         console.error("Signup failed");
       }
     } catch (error) {
-      console.error("Error during signup:", error);
+      console.log((error as any).response.data.message);
+      toast.error("Error during signup:" + (error as any).response.data.message);
     }
   };
 

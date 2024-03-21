@@ -1,4 +1,7 @@
-import React from "react";
+import { apiInstance } from "@/utility/axiosUtility";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 const data = [
   {
@@ -16,6 +19,40 @@ const data = [
 ];
 
 const YourTrip = () => {
+
+  const [tripData, setTripData] = useState<{ venture: itinaryWithImage, _id: string }[]>([])
+
+  const getItinary = async () => {
+    try {
+      const token = localStorage.getItem("token")
+      if (token) {
+        const response = await apiInstance.get(
+          "http://139.59.76.189:4000/venture",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`
+            }
+          }
+        );
+        setTripData(response.data.result);
+
+      } else {
+        toast.error("Please login to save !")
+      }
+
+
+    } catch (error) {
+      console.log((error as any).response.data.message);
+      toast.error("Error:" + (error as any).response.data.message);
+    }
+  };
+
+  useEffect(() => {
+    getItinary();
+  }, [])
+
+
+
   return (
     <section>
       <div className="flex items-center gap-[10px] font-[500] text-[32px] ml-16 my-10 ">
@@ -39,14 +76,15 @@ const YourTrip = () => {
       </div>
       <div className="mt-10 ml-16">
         <div className="flex gap-10 ">
-          {data.map((el, i) => (
-            <div
-              className="flex gap-2 flex-col rounded-xl bg-[#ffffff99]	shadow-md text-primary p-3 cursor-pointer"
+          {tripData.length ? tripData.map((el, i) => (
+            <Link
+              href={`/itinerary?savedItinaryId=${el._id}`}
+              className="flex gap-2 flex-col rounded-xl bg-[#ffffff99]	shadow-md text-primary p-3 cursor-pointer max-w-[250px]"
               key={i}
             >
-              <img src={`/img/place/${i + 1}.png`} alt={`img ${el}`} />
+              <img src={el.venture.placeImg} alt={`${el.venture.destination}`} />
               <div>
-                <h3 className="text-base font-medium">{el.title}</h3>
+                <h3 className="text-base font-medium">{el.venture.destination}</h3>
                 <p className="text-xs font-light flex gap-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -61,11 +99,11 @@ const YourTrip = () => {
                     />
                   </svg>
                   &nbsp;
-                  {el.peopleCount} Days
+                  {el.venture.numberOfDays} Days
                 </p>
               </div>
-            </div>
-          ))}
+            </Link>
+          )) : null}
         </div>
         <div className="bg-[#ffffff99] shadow-md h-[226px] w-[180px] rounded-xl mt-12 cursor-pointer">
           <div className="flex justify-center items-center h-full flex-col gap-[10px]">
