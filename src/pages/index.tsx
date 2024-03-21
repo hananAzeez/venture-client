@@ -51,7 +51,6 @@ export default function Home() {
 
   return (
     <div>
-      <Loading />
       <div className="font-montserrat bg-hero h-screen bg-cover flex flex-col justify-between px-5 xl:p-0">
         <Navbar />
         <div className="container mx-auto mb-20">
