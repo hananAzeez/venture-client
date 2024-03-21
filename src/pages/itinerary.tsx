@@ -16,14 +16,14 @@ const openai = new OpenAI({
 });
 
 const Itinerary = () =>
-  // { places, description, days,  }
+  // { places, description, days }
   {
     const { query } = useRouter();
     const { destination, days } = query;
     const [loading, setLoading] = useState(false);
     const [itinerary, setItinerary] = useState<ItineraryProps | null>(null);
     const [itinaryFullData, setItinaryFullData] =
-      useState<itinaryWithImage | null>();
+      useState<itinaryWithImage | null>(dummyData);
 
     // Define the itinerary schema
 
@@ -105,9 +105,9 @@ const Itinerary = () =>
       }
     }, [destination, days]);
 
-    useEffect(() => {
-      dataConvert();
-    }, [itinerary]);
+    // useEffect(() => {
+    //   dataConvert();
+    // }, [itinerary]);
 
     if (loading) {
       return (
@@ -130,18 +130,18 @@ const Itinerary = () =>
             backgroundImage: `url(${itinaryFullData?.placeImg})`,
           }}
         >
-          <div className="w-full h-full text-white backdrop-brightness-50 flex flex-col justify-between">
+          <div className="w-full h-full text-white backdrop-brightness-50 flex flex-col justify-between px-5 lg:px-5">
             <Navbar />
-            <div className="flex flex-col gap-6 items-center justify-center">
-              <p className="font-semibold tracking-[16.5px] text-3xl">
+            <div className="flex flex-col gap-6 items-center justify-center ">
+              <p className="font-semibold tracking-[16.5px] text-xl md:text-3xl">
                 EXPLORE
               </p>
-              <h1 className="text-header font-bold leading-none -mt-10">
-                {itinaryFullData?.destination ?? destination}
+              <h1 className="text-[100px] text-center lg:text-header font-bold leading-none -mt-6 lg:-mt-10 break-all">
+                kodaikkanal
               </h1>
             </div>
             <div className="days container mx-auto">
-              <h6 className="font-bold text-4xl mb-14 bg-white bg-opacity-10 px-5 py-3 rounded-xl w-fit">
+              <h6 className="font-bold text-2xl lg:text-4xl mb-14 bg-white bg-opacity-10 px-5 py-3 rounded-xl w-fit">
                 {itinaryFullData?.numberOfDays} Days in{" "}
                 {itinaryFullData?.destination}
               </h6>
