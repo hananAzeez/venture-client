@@ -2,11 +2,11 @@ export const DayComponent: React.FC<{ day: itinaryWithImageDay }> = ({
   day,
 }) => (
   <div className="mb-32 grid grid-cols-5">
-    <h2 className="text-xl font-semibold bg-primary2 py-3 px-10 rounded-full text-white w-fit col-span-1 self-start">
+    <h2 className="col-span-5 lg:col-span-1 lg:text-xl font-semibold bg-primary2 py-3 px-6 lg:px-10 rounded-full text-white w-fit self-start mx-auto lg:mx-0 mb-6 lg:mb-0">
       Day {day.day}
     </h2>
     {/* <p className=" mb-4 ">{day.description}</p> */}
-    <div className="flex flex-col gap-10 col-span-4 ">
+    <div className="flex flex-col gap-10 col-span-5 lg:col-span-4 ">
       {day.activities.map((activity, index) => (
         <ActivityComponent
           key={index}
@@ -25,22 +25,24 @@ const ActivityComponent: React.FC<{
   <div
     className={`activity ${
       isLast ? "last-activity" : ""
-    } grid grid-cols-3 shadow-activity py-8 px-12 rounded-xl relative`}
+    } grid grid-cols-3 shadow-activity py-5 lg:py-8 px-7 lg:px-12 rounded-xl relative ml-12`}
   >
     <div className="col-span-2">
-      <p className="text-light opacity-60 font-semibold text-xl">
+      <p className="text-light opacity-60 font-semibold text-lg md:text-xl">
         {activity.time}
       </p>
-      <p className="mt-3 text-dark font-bold text-3xl">{activity.name}</p>
-      <h4 className="mt-4 text-light opacity-70 font-medium text-lg line-clamp-2 pr-8">
+      <p className="mt-3 text-dark font-bold text-xl lg:text-3xl">
+        {activity.name}
+      </p>
+      <h4 className="mt-4 text-light opacity-70 font-medium lg:text-lg line-clamp-2 pr-8">
         {activity.description}
       </h4>
-      <div className="mt-10 location flex gap-4 items-center">
+      <div className="mt-10 location flex gap-4 items-center w-max">
         <a
           href={activity.mapUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex gap-2 w-fit text-white hover:underline bg-primary2 py-3 px-5 rounded-full"
+          className="text-sm lg:text-base flex gap-2 w-fit text-white hover:underline bg-primary2 py-3 px-5 rounded-full"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +74,7 @@ const ActivityComponent: React.FC<{
           href={activity.mapUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex gap-2 w-fit text-white hover:underline bg-light bg-opacity-50 py-3 px-5 rounded-full"
+          className="text-sm lg:text-base flex gap-2 w-fit text-white hover:underline bg-light bg-opacity-50 py-3 px-5 rounded-full"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

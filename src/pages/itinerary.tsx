@@ -133,11 +133,11 @@ const Itinerary = () =>
           <div className="w-full h-full text-white backdrop-brightness-50 flex flex-col justify-between px-5 lg:px-5">
             <Navbar />
             <div className="flex flex-col gap-6 items-center justify-center ">
-              <p className="font-semibold tracking-[16.5px] text-xl md:text-3xl">
+              <p className="font-semibold tracking-[16.5px] text-lg md:text-3xl">
                 EXPLORE
               </p>
-              <h1 className="text-[100px] text-center lg:text-header font-bold leading-none -mt-6 lg:-mt-10 break-all">
-                kodaikkanal
+              <h1 className="text-[84px] text-center lg:text-header font-bold leading-none -mt-6 lg:-mt-10 break-all">
+                {itinaryFullData?.destination ?? destination}
               </h1>
             </div>
             <div className="days container mx-auto">
@@ -147,7 +147,7 @@ const Itinerary = () =>
               </h6>
             </div>
           </div>
-          <div className=" container mx-auto mt-20 pb-20">
+          <div className=" container mx-auto mt-20 pb-20 px-5 lg:px-0">
             <h1 className="text-4xl font-bold mb-16 text-black text-center">
               Your Itinerary
             </h1>

@@ -38,6 +38,32 @@ body {
   z-index: -1;
 }
 
+@media screen and (max-width: 500px) {
+  .activity::before {
+    content: "";
+    width: 36px;
+    height: 36px;
+    background-color: #3a556a;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: -50px;
+  }
+
+  .activity::after {
+    content: "";
+    width: 2px;
+    height: 104%;
+    background: transparent; /* Set background to transparent */
+    border-left: 2px dotted #a3a3a37b; /* Use border for the dotted line */
+    position: absolute;
+    top: 52%;
+    left: -33px;
+    z-index: -1;
+  }
+}
+
 .last-activity::after {
   display: none;
 }
