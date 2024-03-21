@@ -47,12 +47,12 @@ export default function Home() {
 
   return (
     <div>
-      <div className="font-montserrat bg-hero lg:h-screen bg-cover flex flex-col justify-between">
+      <div className="font-montserrat bg-hero h-screen bg-cover flex flex-col justify-between p-5 xl:p-0">
         <Navbar />
         <div className="container mx-auto mb-20">
-          <div className="grid grid-cols-2 ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 ">
             <div className="col-span-1 ">
-              <h1 className="font-bold text-5xl leading-tight text-white">
+              <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl leading-tight text-white">
                 Spend your vacation with our activites
               </h1>
               <div className="flex flex-col gap-6 mt-12">
@@ -93,7 +93,7 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <div className="flex gap-10 ">
+                <div className="flex gap-5 lg:gap-10 ">
                   {data.map((el, i) => (
                     <div
                       className="flex gap-2 flex-col rounded-xl bg-white bg-opacity-60 text-primary p-3"
@@ -134,16 +134,119 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <div className="flex">
+                {/* MOBILE SEARCH */}
+                <div className="lg:hidden bg-white bg-opacity-50 p-4 rounded-lg">
+                  <div className="flex max-w-full bg-white rounded-md">
+                    <div className="flex items-center gap-4 lg:gap-5 p-2 lg:p-3 ml-2 lg:ml-3 border-r border-black border-opacity-30">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="29"
+                        height="28"
+                        viewBox="0 0 29 28"
+                        fill="none"
+                        className="w-6 h-6 lg:w-7 lg:h-7"
+                      >
+                        <g opacity="0.5" clipPath="url(#clip0_74_1259)">
+                          <path
+                            d="M24.7891 23.3334C24.7891 23.6428 24.6662 23.9396 24.4474 24.1584C24.2286 24.3772 23.9318 24.5001 23.6224 24.5001H4.95573C4.64631 24.5001 4.34956 24.3772 4.13077 24.1584C3.91198 23.9396 3.78906 23.6428 3.78906 23.3334V11.0717C3.78894 10.894 3.82945 10.7185 3.9075 10.5588C3.98555 10.399 4.09907 10.2592 4.2394 10.1501L13.5727 2.89107C13.7775 2.73176 14.0296 2.64526 14.2891 2.64526C14.5485 2.64526 14.8006 2.73176 15.0054 2.89107L24.3387 10.1501C24.4791 10.2592 24.5926 10.399 24.6706 10.5588C24.7487 10.7185 24.7892 10.894 24.7891 11.0717V23.3334ZM22.4557 22.1667V11.6411L14.2891 5.28974L6.1224 11.6411V22.1667H22.4557Z"
+                            fill="#3E4958"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_74_1259">
+                            <rect
+                              width="28"
+                              height="28"
+                              fill="white"
+                              transform="translate(0.289062)"
+                            />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <div className="flex flex-col gap-1 max-w-28 lg:max-w-full">
+                        <p className="ml-1 text-secondary text-sm font-medium">
+                          Location
+                        </p>
+                        <input
+                          type="text"
+                          id="destination"
+                          className="bg-transparent text-secondary font-bold placeholder:opacity-50 placeholder:font-medium outline-none"
+                          placeholder="Search"
+                          onChange={(e) =>
+                            setPromptData({
+                              ...promptData,
+                              destination: e.target.value,
+                            })
+                          }
+                        />
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-4 lg:gap-5 p-2 lg:p-3 ml-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="29"
+                        height="28"
+                        viewBox="0 0 29 28"
+                        fill="none"
+                        className="w-6 h-6 lg:w-7 lg:h-7"
+                      >
+                        <g opacity="0.5" clipPath="url(#clip0_184_1320)">
+                          <path
+                            d="M19.8506 3.49984H24.5173C24.8267 3.49984 25.1234 3.62275 25.3422 3.84155C25.561 4.06034 25.6839 4.35708 25.6839 4.6665V23.3332C25.6839 23.6426 25.561 23.9393 25.3422 24.1581C25.1234 24.3769 24.8267 24.4998 24.5173 24.4998H3.51725C3.20783 24.4998 2.91109 24.3769 2.69229 24.1581C2.4735 23.9393 2.35059 23.6426 2.35059 23.3332V4.6665C2.35059 4.35708 2.4735 4.06034 2.69229 3.84155C2.91109 3.62275 3.20783 3.49984 3.51725 3.49984H8.18392V1.1665H10.5173V3.49984H17.5173V1.1665H19.8506V3.49984ZM17.5173 5.83317H10.5173V8.1665H8.18392V5.83317H4.68392V10.4998H23.3506V5.83317H19.8506V8.1665H17.5173V5.83317ZM23.3506 12.8332H4.68392V22.1665H23.3506V12.8332Z"
+                            fill="#3E4958"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_184_1320">
+                            <rect
+                              width="28"
+                              height="28"
+                              fill="white"
+                              transform="translate(0.0170898)"
+                            />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <div className="flex flex-col gap-1 max-w-28 lg:max-w-full">
+                        <p className="ml-1 text-secondary text-sm font-medium">
+                          No. of Days
+                        </p>
+                        <input
+                          type="number"
+                          value={promptData.days}
+                          onChange={(e) =>
+                            setPromptData({
+                              ...promptData,
+                              days:
+                                +e.target.value > 0
+                                  ? +e.target.value
+                                  : promptData.days,
+                            })
+                          }
+                          className="bg-transparent text-secondary font-bold pl-2 outline-none border-none"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  onClick={handleSubmit}
+                  className="py-3 px-8 text-white rounded-lg font-semibold text-lg bg-[#324C28] hover:bg-opacity-90 lg:hidden mx-auto"
+                >
+                  Search
+                </button>
+                {/* MOBILE SEARCH */}
+                <div className="hidden lg:flex max-w-full">
                   <div className="flex gap-6 p-4 bg-white bg-opacity-60 rounded-md">
                     <div className="flex-1 flex items-center bg-white  rounded-xl">
-                      <div className="flex items-center gap-5 p-3 ml-3">
+                      <div className="flex items-center gap-4 lg:gap-5 p-2 lg:p-3 ml-2 lg:ml-3">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="29"
                           height="28"
                           viewBox="0 0 29 28"
                           fill="none"
+                          className="w-6 h-6 lg:w-7 lg:h-7"
                         >
                           <g opacity="0.5" clipPath="url(#clip0_74_1259)">
                             <path
@@ -162,7 +265,7 @@ export default function Home() {
                             </clipPath>
                           </defs>
                         </svg>
-                        <div className="flex flex-col gap-1">
+                        <div className="flex flex-col gap-1 max-w-28 lg:max-w-full">
                           <p className="ml-1 text-secondary text-sm font-medium">
                             Location
                           </p>
@@ -180,14 +283,15 @@ export default function Home() {
                           />
                         </div>
                       </div>
-                      <div className="ml-10 mr-6 w-[1px] h-full bg-secondary opacity-40"></div>
-                      <div className="flex items-center gap-5 p-3">
+                      <div className="ml-4 lg:ml-10 mr-2 lg:mr-6 w-[1px] h-full bg-secondary opacity-40"></div>
+                      <div className="flex items-center gap-4 lg:gap-5 p-2 lg:p-3">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="29"
                           height="28"
                           viewBox="0 0 29 28"
                           fill="none"
+                          className="w-6 h-6 lg:w-7 lg:h-7"
                         >
                           <g opacity="0.5" clipPath="url(#clip0_184_1320)">
                             <path
@@ -206,7 +310,7 @@ export default function Home() {
                             </clipPath>
                           </defs>
                         </svg>
-                        <div className="flex flex-col gap-1">
+                        <div className="flex flex-col gap-1 max-w-28 lg:max-w-full">
                           <p className="ml-1 text-secondary text-sm font-medium">
                             No. of Days
                           </p>
@@ -229,7 +333,7 @@ export default function Home() {
                     </div>
                     <button
                       onClick={handleSubmit}
-                      className="py-2 px-8 text-white rounded-lg font-semibold text-lg bg-[#324C28] hover:bg-opacity-90"
+                      className="py-2 px-8 text-white rounded-lg font-semibold text-lg bg-[#324C28] hover:bg-opacity-90 hidden lg:block"
                     >
                       Search
                     </button>
