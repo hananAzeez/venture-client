@@ -47,7 +47,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="font-montserrat bg-hero h-screen bg-cover flex flex-col justify-between p-5 xl:p-0">
+      <div className="font-montserrat bg-hero h-screen bg-cover flex flex-col justify-between px-5 xl:p-0">
         <Navbar />
         <div className="container mx-auto mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 ">
@@ -137,7 +137,7 @@ export default function Home() {
                 {/* MOBILE SEARCH */}
                 <div className="lg:hidden bg-white bg-opacity-50 p-4 rounded-lg">
                   <div className="flex max-w-full bg-white rounded-md">
-                    <div className="flex items-center gap-4 lg:gap-5 p-2 lg:p-3 ml-2 lg:ml-3 border-r border-black border-opacity-30">
+                    <div className="flex items-center gap-2 lg:gap-5 p-2 lg:p-3 ml-2 lg:ml-3 border-r border-black border-opacity-30">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="29"
@@ -163,14 +163,14 @@ export default function Home() {
                           </clipPath>
                         </defs>
                       </svg>
-                      <div className="flex flex-col gap-1 max-w-28 lg:max-w-full">
-                        <p className="ml-1 text-secondary text-sm font-medium">
+                      <div className="flex flex-col gap-1 max-w-[100px] lg:max-w-full">
+                        <p className=" text-secondary text-sm font-medium">
                           Location
                         </p>
                         <input
                           type="text"
                           id="destination"
-                          className="bg-transparent text-secondary font-bold placeholder:opacity-50 placeholder:font-medium outline-none"
+                          className="bg-transparent text-secondary font-bold text-sm placeholder:opacity-50 placeholder:font-medium outline-none"
                           placeholder="Search"
                           onChange={(e) =>
                             setPromptData({
@@ -181,7 +181,7 @@ export default function Home() {
                         />
                       </div>
                     </div>
-                    <div className="flex items-center gap-4 lg:gap-5 p-2 lg:p-3 ml-3">
+                    <div className="flex items-center gap-2 lg:gap-5 p-2 lg:p-3 ml-3">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="29"
@@ -207,7 +207,7 @@ export default function Home() {
                           </clipPath>
                         </defs>
                       </svg>
-                      <div className="flex flex-col gap-1 max-w-28 lg:max-w-full">
+                      <div className="flex flex-col gap-1 max-w-[100px] lg:max-w-full">
                         <p className="ml-1 text-secondary text-sm font-medium">
                           No. of Days
                         </p>
@@ -223,7 +223,7 @@ export default function Home() {
                                   : promptData.days,
                             })
                           }
-                          className="bg-transparent text-secondary font-bold pl-2 outline-none border-none"
+                          className="bg-transparent text-secondary font-bold pl-2 text-sm outline-none border-none"
                         />
                       </div>
                     </div>
