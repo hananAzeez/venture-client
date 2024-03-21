@@ -73,11 +73,13 @@ const Navbar = () => {
 
         {loggedIn ? (
           // <Dropdown menu={{ items }} placement="bottomRight" arrow>
-          <img
-            src="img/profilePreview.png"
-            alt="profile"
-            className="w-8 h-8 rounded-full cursor-pointer"
-          />
+          <Link href="/profile">
+            <img
+              src="img/profilePreview.png"
+              alt="profile"
+              className="w-8 h-8 rounded-full cursor-pointer"
+            />
+          </Link>
         ) : (
           // {/* </Dropdown> */}
           <Link

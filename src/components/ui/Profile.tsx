@@ -12,7 +12,7 @@ const Profile = ({ data }: { data: Person | null }) => {
             <div className=" flex gap-5  flex-row items-center justify-between px-11">
               <div className="flex gap-7">
                 <Image
-                  src="/img/annan.png"
+                  src="/img/user-icon.png"
                   className="my-11 rounded-full"
                   alt="logo"
                   width={100}

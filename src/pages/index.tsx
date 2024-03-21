@@ -9,17 +9,17 @@ const data = [
   {
     title: "Delhi",
     peopleCount: 31,
-    link: "http://localhost:3000/itinerary?destination=Delhi&days=2",
+    link: "https://venture-ai.netlify.app/itinerary?destination=Delhi&days=2",
   },
   {
     title: "Munnar",
     peopleCount: 27,
-    link: "http://localhost:3000/itinerary?destination=Munnar&days=1",
+    link: "https://venture-ai.netlify.app/itinerary?destination=Munnar&days=1",
   },
   {
     title: "Agra",
     peopleCount: 20,
-    link: "http://localhost:3000/itinerary?destination=Agra&days=1",
+    link: "https://venture-ai.netlify.app/itinerary?destination=Agra&days=1",
   },
 ];
 
