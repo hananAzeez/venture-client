@@ -56,7 +56,7 @@ const Navbar = () => {
         <Link href="/">
           <img src="/img/logo-white.png" alt="logo"></img>
         </Link>
-        <ul className="hidden lg:flex items-center justify-center gap-16">
+        {/* <ul className="hidden lg:flex items-center justify-center gap-16">
           <li className="font-medium text-sm text-white hover:opacity-85 cursor-pointer">
             Activities
           </li>
@@ -69,7 +69,7 @@ const Navbar = () => {
           <li className="font-medium text-sm text-white hover:opacity-85 cursor-pointer">
             Contact
           </li>
-        </ul>
+        </ul> */}
 
         {loggedIn ? (
           // <Dropdown menu={{ items }} placement="bottomRight" arrow>
