@@ -64,15 +64,15 @@ const Loading = () => {
   return (
     <main>
       <div className="w-full h-screen p-10  overflow-hidden">
-        <div className="grid grid-cols-7 gap-10 items-start h-full">
+        <div className="grid lg:grid-cols-7 gap-10 items-start h-full">
           {/* TEXT👇 */}
-          <div className="col-span-3 flex flex-col gap-10 text-dark mt-10 px-6">
+          <div className="lg:col-span-3 flex flex-col gap-10 text-dark mt-10 px-6">
             <img
               src="/img/venture-logo-loading.png"
               alt="logo"
               className="max-w-52"
             ></img>
-            <h3 className="font-semibold text-2xl mt-20 leading-normal">
+            <h3 className="font-semibold text-2xl mt-10 lg:mt-20 leading-normal">
               {Loadingdata[index].quote}
             </h3>
             <h5 className="font-medium text-xl -mt-3">
@@ -81,7 +81,7 @@ const Loading = () => {
           </div>
           {/* TEXT👆 */}
           {/* IMAGE👇 */}
-          <div className="col-span-4 h-full overflow-hidden relative">
+          <div className="lg:col-span-4 h-full overflow-hidden relative">
             <img
               src={Loadingdata[index].image}
               alt="travel"
