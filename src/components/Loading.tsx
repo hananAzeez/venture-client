@@ -32,47 +32,49 @@ const Loadingdata = [
   },
 ];
 
-const Loading = () => {
+const Loading = ({ progress }: { progress: number }) => {
   const [index, setIndex] = useState(0);
-  const [progress, setProgress] = useState(0);
+  // const [progress, setProgress] = useState(0);
+
+  // useEffect(() => {
+  //   const interval = 10 / 3; // Total duration divided by number of steps
+  //   let currentStep = 0;
+
+  //   const timer = setInterval(() => {
+  //     currentStep++;
+  //     if (currentStep <= 3) {
+  //       const newProgress = (currentStep / 3) * 100;
+  //       setProgress(newProgress);
+  //     } else {
+  //       clearInterval(timer);
+  //     }
+  //   }, interval * 1000);
+
+  //   return () => clearInterval(timer);
+  // }, []);
 
   useEffect(() => {
-    const interval = 10 / 3; // Total duration divided by number of steps
-    let currentStep = 0;
-
-    const timer = setInterval(() => {
-      currentStep++;
-      if (currentStep <= 3) {
-        const newProgress = (currentStep / 3) * 100;
-        setProgress(newProgress);
-      } else {
-        clearInterval(timer);
-      }
-    }, interval * 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
+    // const interval = setInterval(() => {
+    if (progress > 10) {
       setIndex((prevIndex) => (prevIndex + 1) % Loadingdata.length);
-    }, 5000);
+    }
+    // }, 5000);
 
-    return () => clearInterval(interval);
-  }, []);
+    // return () => clearInterval(interval);
+  }, [progress]);
 
   return (
     <main>
       <div className="w-full h-screen p-10  overflow-hidden">
         <div className="grid lg:grid-cols-7 gap-10 items-start h-full">
           {/* TEXT👇 */}
-          <div className="lg:col-span-3 flex flex-col gap-10 text-dark mt-10 px-6">
+          <div className="lg:col-span-3 flex flex-col gap-10 text-dark pt-10 px-6 h-full">
             <img
               src="/img/venture-logo-loading.png"
               alt="logo"
               className="max-w-52"
             ></img>
-            <h3 className="font-semibold text-2xl mt-10 lg:mt-20 leading-normal">
+            <h3 className="font-semibold text-2xl mt-10 lg:mt-60 leading-normal">
               {Loadingdata[index].quote}
             </h3>
             <h5 className="font-medium text-xl -mt-3">
@@ -90,7 +92,7 @@ const Loading = () => {
             <div className="absolute bottom-4 left-[2%]  w-[96%] bg-gray-300 bg-opacity-60 backdrop:blur-md h-3 rounded-full">
               {/* bg-gradient-to-r from-emerald-500 to-emerald-900 */}
               <div
-                className="bg-gradient-to-r from-emerald-400 to-cyan-400 h-full rounded-full transition-all duration-300"
+                className="bg-gradient-to-r from-emerald-400 to-cyan-400 h-full rounded-full transition-all duration-700"
                 style={{ width: `${progress}%` }}
               ></div>
             </div>

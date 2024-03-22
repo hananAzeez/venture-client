@@ -3,7 +3,11 @@ import React from "react";
 
 const Profile = ({ data }: { data: Person | null }) => {
   if (!data) {
-    return <h1>data laoding</h1>;
+    return (
+      <div className="flex justify-center px-16 w-full h-[70vh] items-center">
+        <h1>data loading</h1>
+      </div>
+    )
   } else
     return (
       <section>

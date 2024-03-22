@@ -2,6 +2,7 @@ import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 /* eslint-disable @next/next/no-img-element */
 const Signup = () => {
@@ -26,14 +27,14 @@ const Signup = () => {
 
       if (response.status === 200) {
         // Handle successful signup
-        console.log("Signup successful");
+        toast.success("Signup successful");
         router.push("/login");
       } else {
         // Handle signup failure
         console.error("Signup failed");
       }
     } catch (error) {
-      console.error("Error during signup:", error);
+      toast.error("Error during signup:" + (error as any).response.data.message);
     }
   };
 

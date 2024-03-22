@@ -33,6 +33,12 @@ const profile = () => {
     }
   }, []);
 
+  const logout = (e: any) => {
+    e.preventDefault();
+    localStorage.removeItem("token")
+    router.push("/");
+  }
+
   return (
     <div className="flex h-screen w-screen">
       <div className="max-w-[375px] w-full bg-[#f7f7f7] flex-col flex shadow-xl z-10 pl-20 py-12">
@@ -45,7 +51,7 @@ const profile = () => {
             height={50}
           />
         </Link>
-        <div className="mt-12">
+        <div className="mt-12 flex flex-col justify-between h-full">
           <ul className="text-[22px] w-56 text-dark font-[500] ">
             <li
               className=" profile-item flex items-center justify-between py-4 cursor-po hover:bg-primary2 hover:text-white rounded-xl px-6 transition-all duration-200 cursor-pointer"
@@ -127,6 +133,23 @@ const profile = () => {
                 />
               </svg>
             </li>
+          </ul>
+          <ul className="text-[22px] w-56 text-dark font-[500] ">
+            <li
+
+              className="log-out-btn profile-item flex items-center justify-between py-4 cursor-po hover:bg-primary2 hover:text-white rounded-xl px-6 transition-all duration-200 cursor-pointer"
+              onClick={logout}
+            >
+              <div className="flex items-center gap-4">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.4999 12.0999L0.899902 6.4999L6.4999 0.899902" stroke="#FF7171" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M12.1 12.0999L6.5 6.4999L12.1 0.899902" stroke="#FC5050" stroke-opacity="0.972549" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <p>Logout</p>
+              </div>
+            </li>
+
           </ul>
         </div>
       </div>

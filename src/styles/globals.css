@@ -30,8 +30,10 @@ body {
   content: "";
   width: 2px;
   height: 104%;
-  background: transparent; /* Set background to transparent */
-  border-left: 2px dotted #a3a3a37b; /* Use border for the dotted line */
+  background: transparent;
+  /* Set background to transparent */
+  border-left: 2px dotted #a3a3a37b;
+  /* Use border for the dotted line */
   position: absolute;
   top: 52%;
   left: -77px;
@@ -55,8 +57,10 @@ body {
     content: "";
     width: 2px;
     height: 104%;
-    background: transparent; /* Set background to transparent */
-    border-left: 2px dotted #a3a3a37b; /* Use border for the dotted line */
+    background: transparent;
+    /* Set background to transparent */
+    border-left: 2px dotted #a3a3a37b;
+    /* Use border for the dotted line */
     position: absolute;
     top: 52%;
     left: -33px;
@@ -74,6 +78,7 @@ body {
   width: 80px;
   height: 80px;
 }
+
 .lds-hourglass:after {
   content: " ";
   display: block;
@@ -86,15 +91,18 @@ body {
   border-color: #3a556a transparent #3a556a transparent;
   animation: lds-hourglass 1.2s infinite;
 }
+
 @keyframes lds-hourglass {
   0% {
     transform: rotate(0);
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
+
   50% {
     transform: rotate(900deg);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
+
   100% {
     transform: rotate(1800deg);
   }
@@ -102,4 +110,24 @@ body {
 
 .profile-item:hover svg path {
   fill: #fff;
+}
+
+.log-out-btn {
+  box-shadow: 0 0 8.7px 0 rgba(0, 0, 0, 0.15);
+}
+
+.log-out-btn:hover {
+  background: #F84B4B;
+}
+.log-out-btn:hover svg path {
+  fill: none;
+  stroke: #fff;
+}
+
+.log-out-btn p {
+  color: #F84B4B;
+}
+
+.log-out-btn:hover p {
+  color: #fff;
 }
