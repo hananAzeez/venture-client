@@ -3,6 +3,7 @@ import Profile from "@/components/ui/Profile";
 import YourTrip from "@/components/ui/YourTrip";
 import { apiInstance } from "@/utility/axiosUtility";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
@@ -35,7 +36,7 @@ const profile = () => {
   return (
     <div className="flex h-screen w-screen">
       <div className="max-w-[375px] w-full bg-[#f7f7f7] flex-col flex shadow-xl z-10 pl-20 py-12">
-        <div className="">
+        <Link href="/">
           <Image
             src="/img/logo-black.png"
             className=""
@@ -43,7 +44,7 @@ const profile = () => {
             width={165}
             height={50}
           />
-        </div>
+        </Link>
         <div className="mt-12">
           <ul className="text-[22px] w-56 text-dark font-[500] ">
             <li
@@ -197,7 +198,7 @@ const profile = () => {
             </svg>
             <div>
               <Image
-                src="/img/shaan.png"
+                src="/img/user-icon.png"
                 className="rounded-full cursor-pointer"
                 alt="logo"
                 width={32}

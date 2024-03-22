@@ -3,19 +3,23 @@ import Navbar from "@/components/layout/Navbar";
 import { useState } from "react";
 import Itinerary from "./itinerary";
 import { useRouter } from "next/router";
+import Loading from "@/components/Loading";
 
 const data = [
   {
     title: "Delhi",
     peopleCount: 31,
+    link: "https://venture-ai.netlify.app/itinerary?destination=Delhi&days=2",
   },
   {
     title: "Munnar",
     peopleCount: 27,
+    link: "https://venture-ai.netlify.app/itinerary?destination=Munnar&days=1",
   },
   {
     title: "Agra",
     peopleCount: 20,
+    link: "https://venture-ai.netlify.app/itinerary?destination=Agra&days=1",
   },
 ];
 
@@ -60,7 +64,7 @@ export default function Home() {
                   <h2 className="font-medium text-2xl uppercase text-white">
                     Most Popular
                   </h2>
-                  <svg
+                  {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="32"
                     height="32"
@@ -91,13 +95,14 @@ export default function Home() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     />
-                  </svg>
+                  </svg> */}
                 </div>
                 <div className="flex gap-5 lg:gap-10 ">
                   {data.map((el, i) => (
-                    <div
+                    <a
                       className="flex gap-2 flex-col rounded-xl bg-white bg-opacity-60 text-primary p-3"
                       key={i}
+                      href={el.link}
                     >
                       <img src={`/img/place/${i + 1}.png`} alt={`img ${el}`} />
                       <div>
@@ -131,7 +136,7 @@ export default function Home() {
                           {el.peopleCount} people going
                         </p>
                       </div>
-                    </div>
+                    </a>
                   ))}
                 </div>
                 {/* MOBILE SEARCH */}
